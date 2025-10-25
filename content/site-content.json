@@ -1,0 +1,275 @@
+{
+  "company": {
+    "name": "Alum Forms",
+    "tagline": "Elevating Form Work Construction Standards: Precision, Performance and Perfection",
+    "description": "We are into Manufacturing of Aluminium Formwork shuttering, Design, Installation and Supervision. Aluminium Formwork Shuttering is used in the Construction of High Raised Residential, Commercial and Framed Structures, Villa housing projects.",
+    "vision": "To revolutionize construction practices through advanced aluminum formwork solutions, enhancing efficiency and sustainability.",
+    "mission": "To Strengthen our presence as Pioneer in Aluminum Formwork Design, supply and installation creating sustainable environment."
+  },
+  "contact": {
+    "office": {
+      "location": "LH No. 16-11-740/3/37, Gaddiannaram, Dilsukhnagar, Hyderabad, 500060.",
+      "label": "OFFICE LOCATION"
+    },
+    "factory": {
+      "location": "5-22, Gowraram Village, Pamulaparthy Road, Siddipet Dist 502279.",
+      "label": "FACTORY LOCATION"
+    },
+    "emails": ["info@alumforms.com", "sales@alumforms.com"],
+    "phones": ["+91 9390158680", "+91 9493200999"]
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/profile.php?id=61559667550127",
+    "instagram": "#",
+    "twitter": "https://x.com/alumforms2",
+    "linkedin": "https://www.linkedin.com/in/alumforms-alumforms-928ba030a/"
+  },
+  "pages": {
+    "home": {
+      "hero": {
+        "title": "Alum forms",
+        "subtitle": "Elevating Form Work Construction Standards: Precision, Performance and Perfection",
+        "cta": "Discover more"
+      },
+      "excellence": {
+        "title": "Empowering Construction Excellence, Every Step of the Way",
+        "description": "We at ALUM FORMS are innovators, problem solvers, and collaborators in your construction journey—we are more than just a supplier of manufacturing and construction solutions.",
+        "features": [
+          {
+            "title": "Expert Team",
+            "description": "The personnel in our team are driven and committed to exceeding the limits of traditional construction methods.",
+            "icon": "team"
+          },
+          {
+            "title": "Commitment to Quality",
+            "description": "Our steadfast dedication to quality, innovation, and client happiness is what makes us unique.",
+            "icon": "quality"
+          },
+          {
+            "title": "Innovation-Driven",
+            "description": "Motivated by our ambition to revolutionize the construction industry, we consistently allocate resources towards research, development, and technology.",
+            "icon": "innovation"
+          }
+        ]
+      },
+      "services": {
+        "title": "OUR SERVICES",
+        "subtitle": "Transforming Concepts into Concrete Reality",
+        "description": "Explore our comprehensive range of innovative products and services tailored to elevate your construction projects. From advanced aluminium formwork systems to expert design and engineering solutions, we're here to empower your vision. Discover excellence, efficiency, and reliability with ALUM FORMS.",
+        "cta": "Discover more"
+      },
+      "advantages": {
+        "title": "ADVANTAGES OF ALUM FORM SYSTEMS",
+        "items": [
+          {
+            "title": "reusable",
+            "description": "Alum Form System can be used 100 - 150 times giving the advantage of additional ROI using the economies of scale",
+            "icon": "reusable"
+          },
+          {
+            "title": "superior FINISHING",
+            "description": "Aluminium's smooth finish eliminates plastering, yielding durable structures with minimal maintenance costs.",
+            "icon": "finishing"
+          },
+          {
+            "title": "QUALITY ASSURANCE",
+            "description": "Alum Form System uses High Grade alloy grade and we are dedicated to infusing excellence in every step",
+            "icon": "quality"
+          },
+          {
+            "title": "ENVIRONMENT FRIENDLY",
+            "description": "Alum Form System uses aluminium and wood for superior concrete finish, eliminating debris.",
+            "icon": "environment"
+          },
+          {
+            "title": "SITE SUPPORT",
+            "description": "Alum Form System guides clients through any issue , delivering exceptional customer support.",
+            "icon": "support"
+          },
+          {
+            "title": "RESONABLE PRIcing",
+            "description": "Get premium quality at competitive rates with ALUM FORMS, ensuring the best value for your investment.",
+            "icon": "pricing"
+          },
+          {
+            "title": "TIMELY DELIVERY",
+            "description": "With our efficient logistics and streamlined processes, ALUM FORMS ensures your materials arrive on schedule, every time.",
+            "icon": "delivery"
+          }
+        ]
+      },
+      "whyChooseUs": {
+        "title": "Why Choose Us",
+        "subtitle": "We present work from skilled hands to perfection.",
+        "features": [
+          {
+            "title": "Expertise",
+            "description": "Benefit from our extensive experience and expertise in aluminum formwork systems, design, and engineering services.",
+            "icon": "expertise"
+          },
+          {
+            "title": "Quality Assurance",
+            "description": "Our commitment to quality ensures that every product and service we deliver meets the highest industry standards.",
+            "icon": "quality"
+          },
+          {
+            "title": "Customization",
+            "description": "We offer tailored solutions to suit the unique requirements of each project, ensuring optimal efficiency and cost-effectiveness.",
+            "icon": "customization"
+          },
+          {
+            "title": "Innovation",
+            "description": "Stay ahead of the curve with our cutting-edge technology and innovative solutions designed to streamline your construction processes and maximize productivity.",
+            "icon": "innovation"
+          }
+        ]
+      }
+    },
+    "about": {
+      "title": "about us",
+      "description": "We are into Manufacturing of Aluminium Formwork shuttering, Design, Installation and Supervision. Aluminium Formwork Shuttering is used in the Construction of High Raised Residential, Commercial and Framed Structures, Villa housing projects.",
+      "details": [
+        "It is a fast-paced construction technique that uses Aluminium Formwork to create strong and durable buildings and it is more economical than traditional construction methods because it requires less labour and time. It is also faster than traditional construction, more seismic resistance, smooth finishing of wall and slab, faster completion of floors, good quality of construction work with lesser joints and reduce leakages.",
+        "The Formwork is the advanced system made of strong and sturdy Aluminium Components that has great strength, durability, simple to install, adaptable and is used in construction.",
+        "Aluminium Formwork is majorly used in the places where the whole structures are made of concrete, the wall reinforcing steel is placed with the floor slab, prefabricated room-sized wall panels and floor slab panels are erected. The Aluminium alloy slabs are accurately made as per the required sizes. Spaces for windows, ducts, doors and other features such as staircases, façade panels are also integrated into these structures. After casting the forms,"
+      ],
+      "process": [
+        "High Quality concrete is poured",
+        "The concrete takes the form and shape of the cast",
+        "The formwork side walls can be removed after 24 hours of concreting followed by deck formwork.",
+        "The detached formwork is cleaned with scrapers, and brushes and stacked properly for the next use.",
+        "The load-carrying capacity of formwork is 7-8 tonnes per square meter. The formwork is lightweight and weighs around 18-20 kg per square meter.",
+        "The formwork component is highly durable and can be repeated around 100 times.",
+        "High speed of construction can be achieved by this system with quick completion of the project.",
+        "The time required to cast floor is 7 days with the use of formwork."
+      ],
+      "promoters": {
+        "title": "About the Promoters",
+        "details": [
+          "Along with two entrepreneurs, the firm was founded by visionary Shri K Suryanarayana, who has over 30 years of expertise in the aluminum extrusion industry.",
+          "Shri K Suryanarayana possesses extensive expertise in aluminum extrusion manufacturing and fabrication. Among the principal clients are NCC, Shapurji Pallonji, L&T, etc. He owns an aluminum construction plant at Gowraram Village, Wargal Mandal, near Hyderabad, and a fabrication business in Cherlapally, Hyderabad",
+          "With Jayabheri Group and NCC, the company has work orders totaling a good eight digit number."
+        ]
+      },
+      "coreValues": {
+        "title": "OUR CORE VALUES",
+        "subtitle": "Innovating Excellence, Building Integrity.",
+        "description": "At ALUM FORMS, we strive for excellence in everything we do. From the quality of our products to the service we provide, we are committed to delivering exceptional results that exceed expectations.",
+        "vision": {
+          "title": "Our Vision",
+          "description": "To revolutionize construction practices through advanced aluminum formwork solutions, enhancing efficiency and sustainability."
+        },
+        "mission": {
+          "title": "Our Mission",
+          "description": "To Strengthen our presence as Pioneer in Aluminum Formwork Design, supply and installation creating sustainable environment."
+        }
+      },
+      "excellence": {
+        "title": "EXPERIENCE EXCELLENCE WITH ALUM FORMS",
+        "description": "At Alum Forms, our state-of-the-art aluminum formwork solutions are transforming the building industry. With years of experience and creativity, we provide construction projects of all sizes with unmatched quality, cost-effectiveness, and efficiency. Discover the possibilities with Alum Forms and get unparalleled construction quality.",
+        "additional": "With our cutting-edge aluminum formwork system, we transform the construction industry and establish new benchmarks for productivity, timeliness, and quality in building projects across the globe. Developers, contractors, and other construction industry professionals may accomplish their objectives with assurance and accuracy thanks to our Alum Forms."
+      }
+    },
+    "services": {
+      "title": "OUR SERVICES",
+      "subtitle": "Transforming Concepts into Concrete Reality",
+      "description": "Explore our comprehensive range of innovative products and services tailored to elevate your construction projects. From advanced aluminum formwork systems to expert design and engineering solutions, we're here to empower your vision. Discover excellence, efficiency, and reliability with ALUM FORMS.",
+      "services": [
+        {
+          "title": "Aluminum Formwork Systems",
+          "description": "Our aluminum formwork systems represent a paradigm shift in construction methodologies, offering unparalleled efficiency, durability, and versatility. Engineered with precision, our systems enable rapid assembly and dismantling, significantly reducing construction timelines and costs. The high reusability of our aluminum components ensures long-term cost savings while minimizing environmental impact. Additionally, our formwork systems deliver exceptional concrete finishing quality, resulting in structures of superior aesthetic appeal and structural integrity. Whether for residential, commercial, industrial, or infrastructure projects, our comprehensive range of formwork solutions, including wall, slab, column, and special formwork, caters to diverse construction needs with unmatched performance and reliability."
+        },
+        {
+          "title": "Design and Engineering Services",
+          "description": "At ALUM FORMS, we offer comprehensive design and engineering services tailored to meet the unique requirements of each project. Our team of experienced engineers utilizes advanced software and cutting-edge technologies to develop customized solutions that optimize structural integrity, minimize material wastage, and enhance overall project efficiency. From initial concept to detailed design documentation, rely on our expertise to bring your vision to life with precision and innovation."
+        },
+        {
+          "title": "Manufacturing and Supply",
+          "description": "With state-of-the-art manufacturing facilities and stringent quality control measures, we ensure the production of high-quality aluminum formwork components that meet the highest industry standards. Our efficient supply chain management ensures timely delivery of components to your project site, minimizing downtime and optimizing project schedules. Count on us for reliable manufacturing and supply solutions that support the seamless execution of your construction projects."
+        },
+        {
+          "title": "Installation and Training",
+          "description": "Our professional installation teams are equipped with the expertise and experience to ensure the seamless integration of aluminum formwork systems on your project site. With meticulous attention to detail and adherence to safety protocols, we guarantee efficient and precise installation, minimizing disruptions and maximizing productivity. Additionally, we provide comprehensive training programs to equip your team with the knowledge and skills required to operate the formwork systems effectively, ensuring optimal performance throughout the project duration."
+        }
+      ],
+      "howItWorks": {
+        "title": "HOW IT WORKS",
+        "subtitle": "Transforming Vision into Reality, Step by Step",
+        "description": "Beginning with a consultation, we dive into understanding your project requirements, timelines, and budget constraints. Leveraging this insight, our team of seasoned engineers and designers crafts a tailored solution optimized for your unique needs. Once the design is finalized, our state-of-the-art manufacturing facilities spring into action, meticulously producing high-quality aluminum formwork components.",
+        "steps": [
+          {
+            "title": "Consultation",
+            "description": "Begin by scheduling a consultation with our expert team. We'll discuss your project requirements, timelines, and budget to tailor a solution that meets your specific needs."
+          },
+          {
+            "title": "Design & Engineering",
+            "description": "Our team of experienced engineers will craft a customized design solution optimized for your project. We leverage cutting-edge technology and industry expertise to ensure precision and efficiency."
+          },
+          {
+            "title": "Supervision & Support",
+            "description": "Throughout the project lifecycle, our dedicated team provides ongoing supervision and support to address any challenges and ensure smooth project execution."
+          },
+          {
+            "title": "Project Completion",
+            "description": "As your project nears completion, we conduct thorough quality checks to ensure everything meets our high standards."
+          }
+        ]
+      }
+    },
+    "components": {
+      "title": "OUR COMPONENTS",
+      "subtitle": "Precision Components, Elevated Construction.",
+      "description": "Transform your construction endeavors with ALUMFORMS Aluminum Formwork. Engineered for excellence, our lightweight systems ensure unparalleled speed, efficiency, and durability. Whether for walls, columns, slabs, or intricate geometries, ALUMFORMS empowers you to construct with confidence. Experience innovation at its finest with India's premier aluminum formwork solutions provider",
+      "items": [
+        "BEAM PANEL",
+        "END BEAM",
+        "MID BEAM",
+        "BOLT NUT & WASHER",
+        "ELEVATOR BRACKET",
+        "HOLE BARI",
+        "JOINT BAR",
+        "L PIN",
+        "LONG PIN",
+        "PANEL PULLER",
+        "PROP HEAD",
+        "SLAB INNER CORNER"
+      ]
+    },
+    "contact": {
+      "title": "GET IN TOUCH",
+      "subtitle": "Connect with Us, Your Project Awaits",
+      "description": "Have questions or ready to start your project? Reach out to us! Our friendly team is here to assist you every step of the way.",
+      "formTitle": "Reach Out Today, Build Tomorrow",
+      "formFields": [
+        { "name": "name", "label": "Name", "type": "text", "required": true },
+        { "name": "company", "label": "Company", "type": "text", "required": false },
+        { "name": "email", "label": "Email", "type": "email", "required": true },
+        { "name": "phone", "label": "Phone", "type": "tel", "required": true },
+        { "name": "message", "label": "Message", "type": "textarea", "required": true }
+      ]
+    }
+  },
+  "navigation": [
+    { "label": "HOME", "href": "/" },
+    { "label": "ABOUT", "href": "/about" },
+    { "label": "SERVICES", "href": "/services" },
+    { "label": "COMPONENTS", "href": "/components" },
+    { "label": "ON GOING PROJECTS", "href": "/on-going-projects" },
+    { "label": "CONTACT", "href": "/contact" }
+  ],
+  "footer": {
+    "quickLinks": [
+      { "label": "Home", "href": "/" },
+      { "label": "About us", "href": "/about" },
+      { "label": "Services", "href": "/services" },
+      { "label": "Contact", "href": "/contact" }
+    ],
+    "legal": [
+      { "label": "Terms of service", "href": "/terms-of-service" },
+      { "label": "Privacy Policy", "href": "/privacy-policy" },
+      { "label": "Cookie Policy", "href": "/cookie-policy" }
+    ],
+    "copyright": "Copyright © 2024 Alum Forms, All rights reserved. Powered by VL Webs."
+  }
+}
+
