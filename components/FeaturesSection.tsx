@@ -45,13 +45,13 @@ export function FeaturesSectionDemo() {
     {
       title: "REASONABLE PRICING",
       description:
-        "Get premium quality at competitive rates with ALUM FORMS, ensuring the best value for your investment.",
+        "Get premium quality at competitive rates with Alum Forms, ensuring the best value for your investment.",
       icon: <IconPigMoney />,
     },
     {
       title: "TIMELY DELIVERY",
       description:
-        "With our efficient logistics and streamlined processes, ALUM FORMS ensures your materials arrive on schedule, every time.",
+        "With our efficient logistics and streamlined processes, we ensures your materials arrive on schedule, every time.",
       icon: <IconClock />,
     },
     {
