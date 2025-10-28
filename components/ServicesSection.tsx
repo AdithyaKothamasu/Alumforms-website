@@ -40,7 +40,7 @@ export default function ServicesSection() {
             {/* Call to Action Button */}
             <div className="pt-4">
               <button
-                className="bg-yellow-400 hover:bg-yellow-500 hover:text-white text-gray-800 font-light underline cursor-pointer uppercase text-sm tracking-wide px-8 py-2 transition-colors duration-300 shadow-lg hover:shadow-xl"
+                className="bg-[#ECA72C] hover:bg-[#ECA72C] hover:text-white text-[#131200] font-light underline cursor-pointer uppercase text-sm tracking-wide px-8 py-2 transition-colors duration-300 shadow-lg hover:shadow-xl"
                 onClick={() => window.location.href = '/services'}
               >
                 Discover More

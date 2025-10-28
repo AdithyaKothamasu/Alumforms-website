@@ -44,12 +44,6 @@ export default function Navbar() {
                 Services
               </Link>
               <Link
-                href="/components"
-                className="text-gray-700 hover:text-[#ECA72C] px-3 py-2 text-sm lg:text-lg font-medium transition-colors duration-200"
-              >
-                Components
-              </Link>
-              <Link
                 href="/projects"
                 className="text-gray-700 hover:text-[#ECA72C] px-3 py-2 text-sm lg:text-lg font-medium transition-colors duration-200"
               >

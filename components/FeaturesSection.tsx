@@ -104,7 +104,7 @@ const Advantage = ({
       {index >= 4 && (
         <div className="opacity-0 group-hover/advantage:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-linear-to-b from-gray-50 to-transparent pointer-events-none" />
       )}
-      <div className="mb-4 relative z-10 px-10 text-gray-600">
+      <div className="mb-4 relative z-10 px-10 text-gray-600 group-hover/advantage:text-[#ECA72C] group-hover/advantage:scale-110 group-hover/advantage:translate-x-4 transition-all duration-200 origin-center">
         {icon}
       </div>
       <div className="text-lg font-bold mb-2 relative z-10 px-10">
