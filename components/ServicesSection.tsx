@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function ServicesSection() {
   return (
-    <div className="relative w-full overflow-hidden bg-white">
+    <div className="relative w-full overflow-hidden bg-[#F6F4F3]">
       <div className="container mx-auto px-4 py-16 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Image */}

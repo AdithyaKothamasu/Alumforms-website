@@ -182,7 +182,57 @@ export default function ComponentsCarousel() {
   const translateX = -currentIndex * (100 / visibleCards);
 
   return (
-    <div ref={sectionRef} className="bg-white overflow-hidden py-8">
+
+<div className="w-full relative">
+  {/* Dashed Bottom Right Fade Grid */}
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: `
+        linear-gradient(to right, #d6d3d1 1px, transparent 1px),
+        linear-gradient(to bottom, #d6d3d1 1px, transparent 1px)
+      `,
+      backgroundSize: "20px 20px",
+      backgroundPosition: "0 0, 0 0",
+      maskImage: `
+             repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 80% 80% at 0% 100%, #000 50%, transparent 90%)
+      `,
+      WebkitMaskImage: `
+       repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 80% 80% at 0% 100%, #000 50%, transparent 90%)
+      `,
+      maskComposite: "intersect",
+      WebkitMaskComposite: "source-in",
+    }}
+  />
+    <div ref={sectionRef} className="overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -233,8 +283,8 @@ export default function ComponentsCarousel() {
             aria-label="Previous component"
             className={`absolute left-0 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full shadow-lg transition-all duration-300 ${
               currentIndex === 0
-                ? "bg-gray-200 text-gray-400 cursor-not-allowed"
-                : "bg-white text-gray-900 hover:text-[#ECA72C] cursor-pointer hover:-translate-x-1 hover:scale-110"
+                ? "bg-gray-200 text-gray-400 cursor-not-allowed md:-translate-x-10"
+                : "bg-white text-gray-900 hover:text-[#ECA72C] md:-translate-x-10 md:hover:-translate-x-10 hover:scale-110 cursor-pointer hover:-translate-x-1 hover:scale-110"
             }`}
           >
             <svg
@@ -258,8 +308,8 @@ export default function ComponentsCarousel() {
             aria-label="Next component"
             className={`absolute right-0 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full shadow-lg transition-all duration-300 ${
               currentIndex >= maxIndex
-                ? "bg-gray-200 text-gray-400 cursor-not-allowed"
-                : "bg-white text-gray-900 hover:text-[#ECA72C] cursor-pointer hover:-translate-x-1 hover:scale-110"
+                ? "bg-gray-200 text-gray-400 cursor-not-allowed md:translate-x-10"
+                : "bg-white text-gray-900 hover:text-[#ECA72C] md:translate-x-10 md:hover:translate-x-10 cursor-pointer hover:-translate-x-1 hover:scale-110"
             }`}
           >
             <svg
@@ -278,7 +328,7 @@ export default function ComponentsCarousel() {
           </button>
 
           {/* Pagination Dots */}
-          <div className="flex justify-center mt-8 gap-2">
+          <div className="flex justify-center mt-4 mb-12 gap-2">
             {Array.from({ length: Math.ceil(components.length / visibleCards) }).map(
               (_, index) => (
                 <button
@@ -299,6 +349,7 @@ export default function ComponentsCarousel() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
@@ -351,7 +402,7 @@ function ComponentCard({ component }: ComponentCardProps) {
     >
       <div
         ref={imageRef}
-        className="relative h-64 bg-[#F6F4F3] flex items-center justify-center p-8"
+        className="relative h-64 bg-white flex items-center justify-center p-8"
       >
         <Image
           src={component.image}
