@@ -2,17 +2,31 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out border-gray-200 ${
+      isScrolled 
+        ? "mx-4 mt-4 rounded-2xl shadow-lg bg-white/70 backdrop-blur-md border" 
+        : "bg-white/95 backdrop-blur-sm border-b"
+    }`}>
       <div className="max-w-8xl mx-auto px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -91,7 +105,9 @@ export default function Navbar() {
       {/* Mobile menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden" id="mobile-menu">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
+          <div className={`px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-200 ${
+            isScrolled ? "bg-white/70" : "bg-white"
+          }`}>
             <Link
               href="/about"
               className="text-gray-700 hover:text-[#ECA72C] block px-3 py-2 text-base font-medium"
