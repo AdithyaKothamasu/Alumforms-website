@@ -63,11 +63,15 @@ export default function Hero() {
           </p>
           <div className="flex justify-center">
           <button
-            className="backdrop-blur-xl bg-white/10 cursor-pointer hover:bg-white/20 transition-colors duration-300 px-8 py-3 rounded-full shadow-lg"
+            className="group relative backdrop-blur-xl cursor-pointer bg-white/10 hover:bg-white/20 border border-white/30 hover:border-white/50 transition-all duration-300 px-8 py-3 rounded-full shadow-lg hover:shadow-xl hover:scale-105 overflow-hidden"
             onClick={() => window.location.href = '/contact'}
           >
-            <span className="font-light text-sm uppercase tracking-wide sm:text-md" style={{ color: "inherit" }}>
+            {/* Shine effect on hover */}
+            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
+            
+            <span className="relative font-light text-sm uppercase tracking-wide sm:text-md flex items-center gap-2">
               Discover More
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
             </span>
           </button>
           </div>
