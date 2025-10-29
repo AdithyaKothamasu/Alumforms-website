@@ -284,7 +284,7 @@ export default function ComponentsCarousel() {
             className={`absolute left-0 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full shadow-lg transition-all duration-300 ${
               currentIndex === 0
                 ? "bg-gray-200 text-gray-400 cursor-not-allowed md:-translate-x-10"
-                : "bg-white text-gray-900 hover:text-[#ECA72C] md:-translate-x-10 md:hover:-translate-x-10 hover:scale-110 cursor-pointer hover:-translate-x-1 hover:scale-110"
+                : "bg-white text-gray-900 hover:text-[#ECA72C] md:-translate-x-10 md:hover:-translate-x-10 hover:scale-110 cursor-pointer hover:-translate-x-1"
             }`}
           >
             <svg
