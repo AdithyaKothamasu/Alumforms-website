@@ -105,7 +105,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden" id="mobile-menu">
-          <div className={`px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gray-200 ${
+          <div className={`px-2 pt-2 pb-3 space-y-1 sm:px-3 rounded-b-2xl border-t border-gray-200 ${
             isScrolled ? "bg-white/70" : "bg-white"
           }`}>
             <Link

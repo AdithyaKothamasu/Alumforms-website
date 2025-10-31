@@ -96,6 +96,49 @@ export default function Contact() {
 
           {/* Grid with both boxes */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
+            
+            {/* Contact Form Box */}
+            <form onSubmit={onSubmit} className="bg-[#F6F4F3]/90 backdrop-blur-sm p-6 lg:p-8 shadow-xl">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-md font-bold text-[#131200] mb-1" htmlFor="name">Name</label>
+                  <input id="name" name="name" value={formValues.name} placeholder="Name" onChange={onChange} required className="w-full bg-white text-[#131200] border-2  border-[#ECA72C] focus:outline-none p-2" />
+                </div>
+                <div>
+                  <label className="block text-md font-bold text-[#131200] mb-1" htmlFor="company">Company</label>
+                  <input id="company" name="company" value={formValues.company} placeholder="Company" onChange={onChange} className="w-full  bg-white text-[#131200] border-2 border-[#ECA72C] focus:outline-none p-2" />
+                </div>
+                <div>
+                  <label className="block text-md font-bold text-[#131200] mb-1" htmlFor="email">Email</label>
+                  <input id="email" type="email" name="email" value={formValues.email} placeholder="Email" onChange={onChange} required className="w-full bg-white text-[#131200] border-2 border-[#ECA72C] focus:outline-none p-2" />
+                </div>
+                <div>
+                  <label className="block text-md font-bold text-[#131200] mb-1" htmlFor="phone">Phone</label>
+                  <input id="phone" name="phone" value={formValues.phone} placeholder="Phone" onChange={onChange} required className="w-full  bg-white text-[#131200] border-2 border-[#ECA72C] focus:outline-none p-2" />
+                </div>
+                <div className="md:col-span-2">
+                  <label className="block text-md font-bold text-[#131200] mb-1" htmlFor="message">Message</label>
+                  <textarea id="message" name="message" rows={5} value={formValues.message} placeholder="Message" onChange={onChange} required className="w-full bg-white text-[#131200] border-2 border-[#ECA72C] min-h-[100px] focus:outline-none p-2"></textarea>
+                </div>
+              </div>
+
+              {status.type !== "idle" && (
+                <div className={`mt-4 text-sm ${status.type === "success" ? "text-green-700" : "text-red-700"}`}>
+                  {status.message}
+                </div>
+              )}
+
+              <div className="mt-6 flex justify-center">
+                <button
+                  type="submit"
+                  disabled={submitting}
+                  className="group inline-flex items-center gap-2 bg-[#ECA72C] cursor-pointer text-[#131200] hover:text-white font-light text-sm px-6 py-2 underline uppercase transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-60"
+                >
+                  {submitting ? "Sending..." : "Send Message"}
+                </button>
+              </div>
+            </form>
+
             {/* Contact Info Box */}
             <div className="bg-[#F6F4F3]/90 backdrop-blur-sm shadow-xl p-6">
               <div className="p-4">
@@ -123,47 +166,6 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Contact Form Box */}
-            <form onSubmit={onSubmit} className="bg-[#F6F4F3]/90 backdrop-blur-sm p-6 lg:p-8 shadow-xl">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-md font-bold text-[#131200] mb-1" htmlFor="name">Name</label>
-                  <input id="name" name="name" value={formValues.name} placeholder="Name" onChange={onChange} required className="w-full bg-white text-[#131200] border-2  border-[#ECA72C] focus:outline-none p-2" />
-                </div>
-                <div>
-                  <label className="block text-md font-bold text-[#131200] mb-1" htmlFor="company">Company</label>
-                  <input id="company" name="company" value={formValues.company} placeholder="Company" onChange={onChange} className="w-full  bg-white text-[#131200] border-2 border-[#ECA72C] focus:outline-none p-2" />
-                </div>
-                <div>
-                  <label className="block text-md font-bold text-[#131200] mb-1" htmlFor="email">Email</label>
-                  <input id="email" type="email" name="email" value={formValues.email} placeholder="Email" onChange={onChange} required className="w-full bg-white text-[#131200] border-2 border-[#ECA72C] focus:outline-none p-2" />
-                </div>
-                <div>
-                  <label className="block text-md font-bold text-[#131200] mb-1" htmlFor="phone">Phone</label>
-                  <input id="phone" name="phone" value={formValues.phone} placeholder="Phone" onChange={onChange} required className="w-full  bg-white text-[#131200] border-2 border-[#ECA72C] focus:outline-none p-2" />
-                </div>
-                <div className="md:col-span-2">
-                  <label className="block text-md font-bold text-[#131200] mb-1" htmlFor="message">Message</label>
-                  <textarea id="message" name="message" rows={5} value={formValues.message} placeholder="Message" onChange={onChange} required className="w-full bg-white text-[#131200] border-2 border-[#ECA72C] focus:outline-none p-2"></textarea>
-                </div>
-              </div>
-
-              {status.type !== "idle" && (
-                <div className={`mt-4 text-sm ${status.type === "success" ? "text-green-700" : "text-red-700"}`}>
-                  {status.message}
-                </div>
-              )}
-
-              <div className="mt-6 flex justify-center">
-                <button
-                  type="submit"
-                  disabled={submitting}
-                  className="group inline-flex items-center gap-2 bg-[#ECA72C] cursor-pointer text-[#131200] hover:text-white font-light text-sm px-6 py-2 underline uppercase transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-60"
-                >
-                  {submitting ? "Sending..." : "Send Message"}
-                </button>
-              </div>
-            </form>
           </div>
         </div>
       </section>
