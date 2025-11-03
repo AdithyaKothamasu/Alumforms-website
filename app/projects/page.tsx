@@ -51,7 +51,7 @@ const projectImageSources: Record<string, string[]> = {
     "/images/projects/pmr/pmr-1.jpeg", 
     "/images/projects/pmr/pmr-2.jpeg",
     "/images/projects/pmr/pmr-3.jpeg",
-    "/images/projects/pmr/pmr-4.jpeg",
+    "/images/projects/pmr/pmr-5.jpeg",
   ],
   verdantLivingCommunity: createPlaceholderSet(6),
   starlightProperties: createPlaceholderSet(6)

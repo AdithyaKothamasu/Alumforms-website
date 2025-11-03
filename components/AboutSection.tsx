@@ -72,7 +72,7 @@ export default function AboutSection() {
           <div className="hidden md:block relative">
             <div className="relative h-[500px] rounded-lg overflow-hidden">
               <Image
-                src="/images/other-images/construction-site.jpg"
+                src="/images/landing/about.jpg"
                 alt="Construction site with workers and equipment"
                 fill
                 className="object-contain"

@@ -11,10 +11,9 @@ export default function Hero() {
   
   // Carousel images - using available images from your project
   const carouselImages = [
-    "/images/other-images/99855.jpg",
-    "/images/other-images/3267.jpg",
-    "/images/other-images/WhatsApp-Image-2024-05-15-at-12.00.09-PM.jpeg",
-
+    "/images/landing/hero/hero-2.jpg",
+    "/images/landing/hero/hero-3.jpg",
+    "/images/landing/hero/hero-1.jpeg",
   ];
 
   const headings = [

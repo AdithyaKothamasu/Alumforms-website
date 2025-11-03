@@ -98,27 +98,27 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
             
             {/* Contact Form Box */}
-            <form onSubmit={onSubmit} className="bg-[#F6F4F3]/90 backdrop-blur-sm p-6 lg:p-8 shadow-xl">
+            <form onSubmit={onSubmit} className="bg-[#F6F4F3]/90 backdrop-blur-sm p-6 lg:p-8 shadow-xl rounded-lg">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-md font-bold text-[#131200] mb-1" htmlFor="name">Name</label>
-                  <input id="name" name="name" value={formValues.name} placeholder="Name" onChange={onChange} required className="w-full bg-white text-[#131200] border-2  border-[#ECA72C] focus:outline-none p-2" />
+                  <input id="name" name="name" value={formValues.name} placeholder="Name" onChange={onChange} required className="w-full bg-white text-[#131200] border-2 rounded-lg border-[#ECA72C] focus:outline-none p-2" />
                 </div>
                 <div>
                   <label className="block text-md font-bold text-[#131200] mb-1" htmlFor="company">Company</label>
-                  <input id="company" name="company" value={formValues.company} placeholder="Company" onChange={onChange} className="w-full  bg-white text-[#131200] border-2 border-[#ECA72C] focus:outline-none p-2" />
+                  <input id="company" name="company" value={formValues.company} placeholder="Company" onChange={onChange} className="w-full  bg-white text-[#131200] border-2 rounded-lg border-[#ECA72C] focus:outline-none p-2" />
                 </div>
                 <div>
                   <label className="block text-md font-bold text-[#131200] mb-1" htmlFor="email">Email</label>
-                  <input id="email" type="email" name="email" value={formValues.email} placeholder="Email" onChange={onChange} required className="w-full bg-white text-[#131200] border-2 border-[#ECA72C] focus:outline-none p-2" />
+                  <input id="email" type="email" name="email" value={formValues.email} placeholder="Email" onChange={onChange} required className="w-full bg-white text-[#131200] border-2 rounded-lg border-[#ECA72C] focus:outline-none p-2" />
                 </div>
                 <div>
                   <label className="block text-md font-bold text-[#131200] mb-1" htmlFor="phone">Phone</label>
-                  <input id="phone" name="phone" value={formValues.phone} placeholder="Phone" onChange={onChange} required className="w-full  bg-white text-[#131200] border-2 border-[#ECA72C] focus:outline-none p-2" />
+                  <input id="phone" name="phone" value={formValues.phone} placeholder="Phone" onChange={onChange} required className="w-full  bg-white text-[#131200] border-2 rounded-lg border-[#ECA72C] focus:outline-none p-2" />
                 </div>
                 <div className="md:col-span-2">
                   <label className="block text-md font-bold text-[#131200] mb-1" htmlFor="message">Message</label>
-                  <textarea id="message" name="message" rows={5} value={formValues.message} placeholder="Message" onChange={onChange} required className="w-full bg-white text-[#131200] border-2 border-[#ECA72C] min-h-[100px] focus:outline-none p-2"></textarea>
+                  <textarea id="message" name="message" rows={5} value={formValues.message} placeholder="Message" onChange={onChange} required className="w-full bg-white text-[#131200] border-2 rounded-lg border-[#ECA72C] min-h-[100px] focus:outline-none p-2"></textarea>
                 </div>
               </div>
 
@@ -140,7 +140,7 @@ export default function Contact() {
             </form>
 
             {/* Contact Info Box */}
-            <div className="bg-[#F6F4F3]/90 backdrop-blur-sm shadow-xl p-6">
+            <div className="bg-[#F6F4F3]/90 backdrop-blur-sm shadow-xl p-6 rounded-lg">
               <div className="p-4">
                 <h3 className="text-sm font-semibold text-[#ECA72C] uppercase tracking-wider">{contactInfo.office.label}</h3>
                 <p className="text-[#131200] font-bold text-lg mt-2">Srinivasam, H.No. 16-11-743/37, Gaddiannaram, Dilsukhnagar, Hyderabad, 500060.</p>

@@ -11,10 +11,10 @@ export default function ServicesSection() {
           <div className="hidden md:block relative order-2 lg:order-1">
             <div className="relative h-96 lg:h-[500px] overflow-hidden">
               <Image
-                src="/images/other-images/04-1.jpg"
+                src="/images/landing/services.jpg"
                 alt="Aluminium formwork panels and construction materials"
                 fill
-                className="object-cover"
+                className="object-contain"
                 priority
               />
             </div>
