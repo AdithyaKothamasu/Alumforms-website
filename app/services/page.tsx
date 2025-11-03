@@ -68,10 +68,10 @@ export default function Services() {
             {/* Right Column - Image */}
             <div className="relative h-96 lg:h-[500px] overflow-hidden rounded-lg">
               <Image
-                src="/images/services/services-hero.jpg"
+                src="/images/services/services-hero-2.jpg"
                 alt="Aluminium formwork panels and construction materials"
                 fill
-                className="object-cover align-middle"
+                className="object-cover"
                 priority
               />
             </div>
