@@ -8,22 +8,22 @@ export default function Services() {
     {
       title: "Aluminum Formwork Systems",
       description: "Our aluminum formwork systems represent a paradigm shift in construction methodologies, offering unparalleled efficiency, durability, and versatility. Engineered with precision, our systems enable rapid assembly and dismantling, significantly reducing construction timelines and costs. The high reusability of our aluminum components ensures long-term cost savings while minimizing environmental impact. Additionally, our formwork systems deliver exceptional concrete finishing quality, resulting in structures of superior aesthetic appeal and structural integrity. Whether for residential, commercial, industrial, or infrastructure projects, our comprehensive range of formwork solutions, including wall, slab, column, and special formwork, caters to diverse construction needs with unmatched performance and reliability.",
-      image: "/images/other-images/01-1.jpg"
+      image: "/images/services/services-formwork.png"
     },
     {
       title: "Design and Engineering Services",
       description: "At ALUM FORMS, we offer comprehensive design and engineering services tailored to meet the unique requirements of each project. Our team of experienced engineers utilizes advanced software and cutting-edge technologies to develop customized solutions that optimize structural integrity, minimize material wastage, and enhance overall project efficiency. From initial concept to detailed design documentation, rely on our expertise to bring your vision to life with precision and innovation.",
-      image: "/images/other-images/plant-clean.jpg"
+      image: "/images/services/services-design.png"
     },
     {
       title: "Manufacturing and Supply",
       description: "With state-of-the-art manufacturing facilities and stringent quality control measures, we ensure the production of high-quality aluminum formwork components that meet the highest industry standards. Our efficient supply chain management ensures timely delivery of components to your project site, minimizing downtime and optimizing project schedules. Count on us for reliable manufacturing and supply solutions that support the seamless execution of your construction projects.",
-      image: "/images/other-images/04-1.jpg"
+      image: "/images/services/services-manufacturing.jpg"
     },
     {
       title: "Installation and Training",
       description: "Our professional installation teams are equipped with the expertise and experience to ensure the seamless integration of aluminum formwork systems on your project site. With meticulous attention to detail and adherence to safety protocols, we guarantee efficient and precise installation, minimizing disruptions and maximizing productivity. Additionally, we provide comprehensive training programs to equip your team with the knowledge and skills required to operate the formwork systems effectively, ensuring optimal performance throughout the project duration.",
-      image: "/images/other-images/construction-site.jpg"
+      image: "/images/services/services-installation.jpeg"
     }
   ];
 
@@ -66,12 +66,12 @@ export default function Services() {
             </div>
             
             {/* Right Column - Image */}
-            <div className="relative h-96 lg:h-[500px] overflow-hidden rounded-lg shadow-2xl">
+            <div className="relative h-96 lg:h-[500px] overflow-hidden rounded-lg">
               <Image
-                src="/images/other-images/04-1.jpg"
+                src="/images/services/services-hero.jpg"
                 alt="Aluminium formwork panels and construction materials"
                 fill
-                className="object-cover"
+                className="object-cover align-middle"
                 priority
               />
             </div>
