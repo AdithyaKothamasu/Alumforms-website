@@ -8,7 +8,6 @@ import {
   IconMapPin,
   IconBrandFacebook,
   IconBrandInstagram,
-  IconBrandTwitter,
   IconBrandLinkedin,
 } from "@tabler/icons-react";
 
@@ -84,7 +83,7 @@ export default function Footer() {
                 <IconMapPin className="text-[#ECA72C] mt-1" />
                 <div>
                   <p className="uppercase text-xs tracking-wider text-black/60">Factory Location</p>
-                  <p>5-22, Gowram Village, Pamulaparthy Road, Siddipet Dist 502279.</p>
+                  <p>5-22, Gowraram Village, Pamulaparthy Road, Siddipet Dist 502279.</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
