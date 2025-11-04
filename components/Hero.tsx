@@ -14,6 +14,7 @@ export default function Hero() {
     "/images/landing/hero/hero-2.jpg",
     "/images/landing/hero/hero-3.jpg",
     "/images/landing/hero/hero-1.jpeg",
+    "/images/landing/pallette-packaging.png",
   ];
 
   const headings = [
