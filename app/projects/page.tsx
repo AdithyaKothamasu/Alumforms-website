@@ -173,8 +173,6 @@ function ProjectCarousel({ images, accentColor }: { images: string[]; accentColo
               priority={originalIndex === 0}
               sizes="(min-width: 1024px) 80vw, 100vw"
               className="object-fill object-top"
-              placeholder="blur"
-              blurDataURL="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Cfilter id='b'%3E%3CfeGaussianBlur stdDeviation='20'/%3E%3C/filter%3E%3Crect fill='%23333' width='400' height='300' filter='url(%23b)'/%3E%3C/svg%3E"
             />
           </div>
         ))}
