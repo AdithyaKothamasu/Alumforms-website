@@ -42,10 +42,10 @@ export default function Footer() {
             </h3>
             {/* Social Links below logo/name */}
             <div className="flex gap-3 mb-8">
-              <a aria-label="Facebook" className="p-2.5 rounded-md bg-black/5 hover:bg-black/10 focus:outline-none focus:ring-2 focus:ring-[#ECA72C]" href="#" target="_blank" rel="noopener noreferrer">
+              <a aria-label="Facebook" className="p-2.5 rounded-md bg-black/5 hover:bg-black/10 focus:outline-none focus:ring-2 focus:ring-[#ECA72C]" href="https://www.facebook.com/profile.php?id=61578284707711" target="_blank" rel="noopener noreferrer">
                 <IconBrandFacebook className="text-black" />
               </a>
-              <a aria-label="Instagram" className="p-2.5 rounded-md bg-black/5 hover:bg-black/10 focus:outline-none focus:ring-2 focus:ring-[#ECA72C]" href="#" target="_blank" rel="noopener noreferrer">
+              <a aria-label="Instagram" className="p-2.5 rounded-md bg-black/5 hover:bg-black/10 focus:outline-none focus:ring-2 focus:ring-[#ECA72C]" href="https://www.instagram.com/alum.forms/" target="_blank" rel="noopener noreferrer">
                 <IconBrandInstagram className="text-black" />
               </a>
               <a aria-label="LinkedIn" className="p-2.5 rounded-md bg-black/5 hover:bg-black/10 focus:outline-none focus:ring-2 focus:ring-[#ECA72C]" href="#" target="_blank" rel="noopener noreferrer">
@@ -55,11 +55,6 @@ export default function Footer() {
             {/* Legal row here instead of social, in column */}
             <div className="flex flex-col gap-2 text-sm text-black/70 mt-8">
               <p>Copyright © {new Date().getFullYear()} Alum Forms. All rights reserved.</p>
-              <div className="flex flex-col gap-2 mt-2">
-                <Link className="hover:text-[#ECA72C]" href="#">Terms of service</Link>
-                <Link className="hover:text-[#ECA72C]" href="#">Privacy Policy</Link>
-                <Link className="hover:text-[#ECA72C]" href="#">Cookie Policy</Link>
-              </div>
             </div>
           </div>
 

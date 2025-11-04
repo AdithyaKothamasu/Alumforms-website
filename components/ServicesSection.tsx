@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function ServicesSection() {
   return (
     <div className="relative w-full overflow-hidden bg-[#F6F4F3]">
-      <div className="container mx-auto px-4 py-16 lg:py-24">
+      <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Image */}
           <div className="hidden md:block relative order-2 lg:order-1">
@@ -15,7 +15,7 @@ export default function ServicesSection() {
                 alt="Aluminium formwork panels and construction materials"
                 fill
                 className="object-contain"
-                priority
+                priority={false}
               />
             </div>
           </div>

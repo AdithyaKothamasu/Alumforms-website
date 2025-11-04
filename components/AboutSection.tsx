@@ -6,7 +6,7 @@ import { Lightbulb } from "lucide-react";
 export default function AboutSection() {
   return (
     <div className="relative w-full overflow-hidden bg-[#F6F4F3]">
-      <div className="container mx-auto px-4 py-16 lg:py-24">
+      <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Text Content */}
           <div className="space-y-8">
@@ -17,7 +17,7 @@ export default function AboutSection() {
             
             {/* Introductory Paragraph */}
             <p className="text-md md:text-lg text-gray-600 leading-relaxed">
-              We at Alum Forms are innovators, problem solvers, and collaborators in your construction journey—we are more than just a supplier of manufacturing and construction solutions.
+              We at Alum Forms are innovators, problem solvers, and collaborators in your construction journey. We are more than just a supplier of manufacturing and construction solutions.
             </p>
             
             {/* Three Sub-sections */}
@@ -76,7 +76,7 @@ export default function AboutSection() {
                 alt="Construction site with workers and equipment"
                 fill
                 className="object-contain"
-                priority
+                priority={false}
               />
             </div>
           </div>

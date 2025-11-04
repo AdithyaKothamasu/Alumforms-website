@@ -63,7 +63,7 @@ export default function WhyChooseUs() {
       {/* Background image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/images/other-images/construction.jpg"
+          src="/images/landing/construction.jpg"
           alt="Construction background"
           fill
           className="object-cover"

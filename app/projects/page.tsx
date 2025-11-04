@@ -29,7 +29,7 @@ const projectImageSources: Record<string, string[]> = {
     "/images/projects/deepthi-nirmaan/deepthi-nirmaan1.jpeg", 
      "/images/projects/deepthi-nirmaan/deepthi-nirmaan3.jpeg", 
     ],
-  rasaInfratech:[
+  rasaInfraframe:[
     "/images/projects/gulbarga/rasa-4.jpeg",
     "/images/projects/gulbarga/rasa-2.jpeg",
     "/images/projects/gulbarga/rasa-1.jpeg", 
@@ -80,11 +80,11 @@ const projects: Project[] = [
   //   images: projectImageSources.verdantLivingCommunity,
   // },
   {
-    title: "Rasa Infratech",
+    title: "Rasa Infra Frame",
     location: "Gulbarga, Karnataka",
     sector: "Residential Apartments",
     accent: "#B1731D",
-    images: projectImageSources.rasaInfratech,
+    images: projectImageSources.rasaInfraframe,
   },
   {
     title: "Meera Shanthivanam Pvt Ltd",
