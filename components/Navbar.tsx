@@ -44,7 +44,7 @@ export default function Navbar() {
                 alt="Alumforms Text"
                 width={280}
                 height={280}
-                className="h-10 w-auto"
+                className="h-8 w-auto"
                 />
             </Link>
           </div>
