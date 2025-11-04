@@ -5,7 +5,7 @@ import Image from "next/image";
 const clients = [
   {
     name: "Jayabheri",
-    logo: "/images/clients/jayabheri-logo.webp",
+    logo: "/images/clients/jayabheri.png",
   },
   {
     name: "PMR",
@@ -15,10 +15,10 @@ const clients = [
     name: "Meera Shanthivanam",
     logo: "/images/clients/meera.avif",
   },
-  {
-    name: "Rasa Infra Frame",
-    logo: "/images/clients/rasa.webp",
-  },
+  // {
+  //   name: "Rasa Infra Frame",
+  //   logo: "/images/clients/rasa.webp",
+  // },
   {
     name: "Shreeji Infra",
     logo: "/images/clients/shreeji.jpg",
@@ -62,14 +62,16 @@ export default function ClientsSection() {
                   key={`${client.name}-${index}`}
                   className="flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity duration-300"
                 >
-                  <Image
-                    src={client.logo}
-                    alt={`${client.name} logo`}
-                    width={180}
-                    height={72}
-                    className="h-20 w-auto object-contain"
-                    priority={index === 0}
-                  />
+                  <div className="bg-white rounded-lg p-2 flex items-center justify-center w-[240px] h-[160px]">
+                    <Image
+                      src={client.logo}
+                      alt={`${client.name} logo`}
+                      width={180}
+                      height={100}
+                      className="w-full h-full object-contain"
+                      priority={index === 0}
+                    />
+                  </div>
                 </div>
               ))}
             </div>

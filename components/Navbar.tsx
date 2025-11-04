@@ -32,6 +32,13 @@ export default function Navbar() {
           {/* Logo */}
           <div className="shrink-0">
             <Link href="/" className="flex items-center">
+            <Image
+              src="/images/brand-assets/Alumforms-icon-transparent.png"
+              alt="Alumforms Icon"
+              width={300}
+              height={300}
+              className="h-10 w-auto"
+              />
               <Image
                 src="/images/brand-assets/Alumforms-text-transparent.png"
                 alt="Alumforms Text"

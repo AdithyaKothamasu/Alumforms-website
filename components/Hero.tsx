@@ -11,16 +11,21 @@ export default function Hero() {
   
   // Carousel images - using available images from your project
   const carouselImages = [
-    "/images/landing/hero/hero-2.jpg",
-    "/images/landing/hero/hero-3.jpg",
-    "/images/landing/hero/hero-1.jpeg",
-    "/images/landing/hero/pallette.jpg",
+    // "/images/landing/hero/hero-6.jpg",
+    // "/images/landing/hero/hero-3.jpg",
+    // "/images/landing/hero/pallette.jpg",
+    "/images/landing/hero/hero-9.jpg",
+    "/images/landing/hero/hero-10.jpg",
+    "/images/landing/hero/hero-7.jpg",
+    "/images/landing/hero/hero-8.webp",
+    "/images/landing/hero/hero-5.jpg",
+
   ];
 
   const headings = [
     "Trusted Aluminium Formwork Partner",
     "From Design to Delivery, Excellence in Every Form",
-    "Transforming Construction, One Panel at a Time",
+    "Shaping Structures with Precision and Performance",
   ];
 
   const prevHeadingRef = useRef(0);
@@ -32,7 +37,7 @@ export default function Hero() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
-    }, 5000); // Change slide every 5 seconds
+    }, 2000); // Change slide every 2 seconds
 
     return () => clearInterval(timer);
   }, [carouselImages.length]);
@@ -53,7 +58,7 @@ export default function Hero() {
         {carouselImages.map((image, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
+            className={`absolute inset-0 transition-opacity duration-300 ${
               index === currentSlide ? "opacity-100" : "opacity-0"
             }`}
           >

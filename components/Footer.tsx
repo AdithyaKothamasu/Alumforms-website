@@ -76,7 +76,7 @@ export default function Footer() {
                 <IconMapPin className="text-[#ECA72C] mt-1" />
                 <div>
                   <p className="uppercase text-xs tracking-wider text-black/60">Office Location</p>
-                  <p> Srinivasam, H.No. 16-11-743/37, Gaddiannaram, Dilsukhnagar, Hyderabad, 500060.</p>
+                  <p> Srinivasam, H.No. 16-11-740/3/37, Gaddiannaram, Dilsukhnagar, Hyderabad, 500060.</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
