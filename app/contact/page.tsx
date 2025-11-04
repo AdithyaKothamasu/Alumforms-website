@@ -74,7 +74,7 @@ export default function Contact() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/other-images/plant-clean.jpg"
+            src="/images/about/plant-clean.jpg"
             alt="Plant background"
             fill
             className="object-cover"

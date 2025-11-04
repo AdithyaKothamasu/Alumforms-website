@@ -12,10 +12,6 @@ type Project = {
   images: string[];
 };
 
-const PLACEHOLDER_IMAGE = "/images/other-images/04-1.jpg";
-
-const createPlaceholderSet = (count: number) => Array.from({ length: count }, () => PLACEHOLDER_IMAGE);
-
 const projectImageSources: Record<string, string[]> = {
   jayabheriProperties: [
     "/images/projects/jayabheri/jayabheri-block-b.png",
@@ -53,8 +49,6 @@ const projectImageSources: Record<string, string[]> = {
     "/images/projects/pmr/pmr-3.jpeg",
     "/images/projects/pmr/pmr-5.jpeg",
   ],
-  verdantLivingCommunity: createPlaceholderSet(6),
-  starlightProperties: createPlaceholderSet(6)
 };
 
 const projects: Project[] = [

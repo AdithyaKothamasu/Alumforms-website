@@ -10,7 +10,7 @@ export default function About() {
       <section className="relative h-[50vh] overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/other-images/plant.jpg"
+            src="/images/about/plant.jpg"
             alt="About Alum Forms"
             fill
             className="object-cover"
@@ -52,7 +52,7 @@ export default function About() {
             </div>
             <div className="relative h-96 lg:h-[500px] overflow-hidden shadow-2xl">
               <Image
-                src="/images/other-images/plant-clean.jpg"
+                src="/images/about/plant-clean.jpg"
                 alt="Aluminium formwork construction"
                 fill
                 className="object-cover"
@@ -301,7 +301,7 @@ export default function About() {
             </div>
             <div className="relative h-96 lg:h-[500px] overflow-hidden   shadow-2xl">
               <Image
-                src="/images/other-images/construction.jpg"
+                src="/images/about/about-excellence.jpg"
                 alt="Construction excellence"
                 fill
                 className="object-cover"
