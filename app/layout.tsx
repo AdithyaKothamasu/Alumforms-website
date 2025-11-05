@@ -15,8 +15,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Alum Forms",
-  description: "Aluminium Formwork Shuttering, Design, Installation and Supervision",
+  title: "Alum Forms | Aluminium Formwork Shuttering, Design, Installation and Supervision",
+  description: "Aluminium Formwork Shuttering, Design, Installation and Supervision services provider based in Hyderabad, Telangana, India",
+  alternates: {
+    canonical: process.env.NEXT_PUBLIC_SITE_URL || "https://alumforms.com",
+  },
 };
 
 export default function RootLayout({

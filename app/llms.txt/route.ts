@@ -1,5 +1,5 @@
 export function GET() {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://example.com";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://alumforms.com";
   const body = [
     "# LLMs crawling policy",
     "# This file communicates usage terms for AI crawlers and LLM data usage.",
