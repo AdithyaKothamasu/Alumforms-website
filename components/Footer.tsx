@@ -47,9 +47,9 @@ export default function Footer() {
               <a aria-label="Instagram" className="p-2.5 rounded-md bg-black/5 hover:bg-black/10 focus:outline-none focus:ring-2 focus:ring-[#ECA72C]" href="https://www.instagram.com/alum.forms/" target="_blank" rel="noopener noreferrer">
                 <IconBrandInstagram className="text-black" />
               </a>
-              <a aria-label="LinkedIn" className="p-2.5 rounded-md bg-black/5 hover:bg-black/10 focus:outline-none focus:ring-2 focus:ring-[#ECA72C]" href="#" target="_blank" rel="noopener noreferrer">
+              {/* <a aria-label="LinkedIn" className="p-2.5 rounded-md bg-black/5 hover:bg-black/10 focus:outline-none focus:ring-2 focus:ring-[#ECA72C]" href="#" target="_blank" rel="noopener noreferrer">
                 <IconBrandLinkedin className="text-black" />
-              </a>
+              </a> */}
             </div>
             {/* Legal row here instead of social, in column */}
             <div className="flex flex-col gap-2 text-sm text-black/70 mt-8">
@@ -73,14 +73,14 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Get in touch</h4>
             <ul className="space-y-5 text-black/80">
               <li className="flex items-start gap-3">
-                <IconMapPin className="text-[#ECA72C] mt-1" />
+                <IconMapPin className="text-[#ECA72C] mt-1 w-8 h-8" />
                 <div>
                   <p className="uppercase text-xs tracking-wider text-black/60">Office Location</p>
                   <p> Srinivasam, H.No. 16-11-740/3/37, Gaddiannaram, Dilsukhnagar, Hyderabad, 500060.</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <IconMapPin className="text-[#ECA72C] mt-1" />
+                <IconMapPin className="text-[#ECA72C] mt-1 w-8 h-8" />
                 <div>
                   <p className="uppercase text-xs tracking-wider text-black/60">Factory Location</p>
                   <p>5-22, Gowraram Village, Pamulaparthy Road, Siddipet Dist 502279.</p>
