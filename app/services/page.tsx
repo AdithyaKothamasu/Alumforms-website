@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { ArrowRight } from 'lucide-react';
+import WhatsAppFloatingButton from "../../components/WhatsAppFloatingButton";
 
 export default function Services() {
   const services = [
@@ -48,6 +49,7 @@ export default function Services() {
 
   return (
     <div className="min-h-screen bg-white">
+      <WhatsAppFloatingButton />
       {/* Hero/Intro Section */}
       <section className="bg-[#F6F4F3] py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

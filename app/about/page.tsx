@@ -2,10 +2,12 @@
 
 import Image from "next/image";
 import { Factory, Users, Target, Award, Building2, Lightbulb } from 'lucide-react';
+import WhatsAppFloatingButton from "../../components/WhatsAppFloatingButton";
 
 export default function About() {
   return (
     <div className="min-h-screen bg-white">
+      <WhatsAppFloatingButton />
       {/* Hero Section */}
       <section className="relative h-[50vh] overflow-hidden">
         <div className="absolute inset-0">

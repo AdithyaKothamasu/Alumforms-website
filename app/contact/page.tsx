@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import content from "../../content/site-content.json";
+import WhatsAppFloatingButton from "../../components/WhatsAppFloatingButton";
 
 export default function Contact() {
   const pageCopy = content.pages.contact;
@@ -69,6 +70,7 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-white">
+      <WhatsAppFloatingButton />
       {/* Background Image Section */}
       <section className="relative min-h-screen py-12 lg:py-20">
         {/* Background Image */}

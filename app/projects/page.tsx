@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import WhatsAppFloatingButton from "../../components/WhatsAppFloatingButton";
 
 type Project = {
   title: string;
@@ -221,6 +222,7 @@ function ProjectCarousel({ images, accentColor }: { images: string[]; accentColo
 export default function Projects() {
   return (
     <div className="relative min-h-screen bg-[#F6F4F3]">
+      <WhatsAppFloatingButton />
       <section className="relative overflow-hidden bg-linear-to-br from-[#131200] via-[#1C1A13] to-[#2E291E] text-white">
         <div className="pointer-events-none absolute -left-24 top-12 h-64 w-64 rounded-full bg-[#ECA72C]/30 blur-[120px]" />
         <div className="pointer-events-none absolute -right-16 bottom-0 h-72 w-72 rounded-full bg-[#ECA72C]/20 blur-[140px]" />

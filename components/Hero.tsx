@@ -88,7 +88,7 @@ export default function Hero() {
                 return (
                   <h1
                     key={index}
-                    className={`absolute text-2xl sm:text-3xl md:text-5xl font-bold leading-tight heading-anim ${
+                    className={`absolute text-2xl md:text-3xl lg:text-5xl font-bold leading-tight heading-anim ${
                       isActive
                         ? 'flip-in opacity-100 z-10'
                         : isLeaving
@@ -103,7 +103,7 @@ export default function Hero() {
             </div>
             
             {/* Subtitle */}
-            <p className="text-md sm:text-xl md:text-2xl mt-6 text-gray-200 max-w-2xl leading-relaxed">
+            <p className="text-lg md:text-xl lg:text-2xl md:mt-6 mt-2 mb-4 sm:mb-0 text-gray-200 max-w-2xl leading-relaxed">
               Professional aluminium formwork shuttering, design, installation and supervision services
             </p>
 
