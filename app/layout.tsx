@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,8 +28,34 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://alumforms.com";
+  const logoUrl = new URL(
+    "/images/brand-assets/Alumforms-logo-transparent.png",
+    siteUrl
+  ).toString();
+
   return (
     <html lang="en">
+      <head>
+        <Script id="ld-json-website" type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Alum Forms",
+            url: siteUrl,
+          })}
+        </Script>
+        <Script id="ld-json-organization" type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Alum Forms",
+            url: siteUrl,
+            logo: logoUrl,
+            telephone: "+919390158680",
+          })}
+        </Script>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`} style={{ backgroundColor: '#F6F4F3' }}
       >
