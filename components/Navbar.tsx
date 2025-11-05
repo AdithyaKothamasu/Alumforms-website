@@ -40,11 +40,11 @@ export default function Navbar() {
               className="h-10 w-auto"
               /> */}
               <Image
-                src="/images/brand-assets/Alumforms-text-transparent.png"
+                src="/images/brand-assets/Alumforms-logo-transparent.png"
                 alt="Alumforms Text"
                 width={280}
                 height={280}
-                className="h-8 w-auto"
+                className="md:h-6 h-4 w-auto"
                 />
             </Link>
           </div>

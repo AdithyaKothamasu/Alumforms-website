@@ -14,10 +14,10 @@ export default function Hero() {
     // "/images/landing/hero/hero-6.jpg",
     // "/images/landing/hero/hero-3.jpg",
     // "/images/landing/hero/pallette.jpg",
-    "/images/landing/hero/hero-9.jpg",
+    "/images/landing/hero/hero-9-up.jpg",
     "/images/landing/hero/hero-10.jpg",
     "/images/landing/hero/hero-7.jpg",
-    "/images/landing/hero/hero-8.webp",
+    "/images/landing/hero/hero-8-up.png",
     "/images/landing/hero/hero-5.jpg",
 
   ];
