@@ -19,7 +19,7 @@ export default function Services() {
     {
       title: "Manufacturing and Supply",
       description: "With state-of-the-art manufacturing facilities and stringent quality control measures, we ensure the production of high-quality aluminum formwork components that meet the highest industry standards. Our efficient supply chain management ensures timely delivery of components to your project site, minimizing downtime and optimizing project schedules. Count on us for reliable manufacturing and supply solutions that support the seamless execution of your construction projects.",
-      image: "/images/services/services-manufacturing.jpg"
+      image: "/images/services/manufacturing.jpg"
     },
     {
       title: "Installation and Training",
