@@ -256,7 +256,7 @@ export default function Projects() {
                 <div className="relative grid gap-10 p-8 sm:p-10 lg:gap-14 lg:p-8">
                   <div className="flex flex-col gap-9">
                     <div className="flex items-center justify-between gap-6 text-xs font-semibold uppercase tracking-[0.35em] text-[#131200]/50">
-                      <span>Case {String(index + 1).padStart(2, "0")}</span>
+                      <span>Project {String(index + 1).padStart(2, "0")}</span>
                       <div className="h-px flex-1 bg-[#131200]/10" />
                     </div>
 
