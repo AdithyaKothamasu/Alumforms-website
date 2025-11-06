@@ -130,13 +130,6 @@ export default function Navbar() {
               Services
             </Link>
             <Link
-              href="/components"
-              className="text-gray-700 hover:text-[#ECA72C] block px-3 py-2 text-base font-medium"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Components
-            </Link>
-            <Link
               href="/projects"
               className="text-gray-700 hover:text-[#ECA72C] block px-3 py-2 text-base font-medium"
               onClick={() => setIsMobileMenuOpen(false)}
