@@ -35,6 +35,10 @@ const clients = [
     name: "Shangrila",
     logo: "/images/clients/shangrila.webp",
   },
+  {
+    name: "SVD Infra Developeres",
+    logo: "/images/clients/svd.png",
+  },
 
 ];
 
