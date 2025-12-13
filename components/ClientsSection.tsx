@@ -15,10 +15,10 @@ const clients = [
     name: "Meera Shanthivanam",
     logo: "/images/clients/meera.avif",
   },
-  // {
-  //   name: "Rasa Infra Frame",
-  //   logo: "/images/clients/rasa.webp",
-  // },
+  {
+    name: "SVS Projects",
+    logo: "/images/clients/svs.avif",
+  },
   {
     name: "Shreeji Infra",
     logo: "/images/clients/shreeji.jpg",
