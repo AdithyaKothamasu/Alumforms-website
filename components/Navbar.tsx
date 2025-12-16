@@ -41,7 +41,7 @@ export default function Navbar() {
               /> */}
               <Image
                 src="/images/brand-assets/Alumforms-logo-transparent.png"
-                alt="Alumforms Text"
+                alt="Alumforms - Mivan Shuttering & Aluminium Formwork Manufacturers in Hyderabad, Telangana"
                 width={280}
                 height={280}
                 className="md:h-6 h-4 w-auto"

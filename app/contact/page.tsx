@@ -77,7 +77,7 @@ export default function Contact() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/about/plant-clean.jpg"
-            alt="Plant background"
+            alt="Alumforms manufacturing plant - Mivan shuttering and aluminium formwork manufacturers in Hyderabad, Telangana"
             fill
             className="object-cover"
             priority

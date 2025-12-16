@@ -11,14 +11,14 @@ export default function About() {
       {/* Hero Section */}
       <section className="relative h-[50vh] overflow-hidden">
         <div className="absolute inset-0">
-          <Image
-            src="/images/about/plant.jpg"
-            alt="About Alum Forms"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/50 to-black/70"></div>
+              <Image
+                src="/images/about/plant.jpg"
+                alt="Alumforms manufacturing plant - Mivan shuttering and aluminium formwork manufacturers in Hyderabad, Telangana"
+                fill
+                className="object-cover"
+                priority
+              />
+          <div className="absolute inset-0 bg-black/70"></div>
         </div>
         <div className="relative h-full flex items-center justify-center text-center px-4">
           <div className="max-w-4xl mx-auto">
@@ -26,7 +26,7 @@ export default function About() {
               About Us
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto">
-              Elevating Form Work Construction Standards: Precision, Performance and Perfection
+            Mivan Shuttering & Aluminium Formwork Manufacturers in India
             </p>
           </div>
         </div>
@@ -43,19 +43,19 @@ export default function About() {
                 </span>
               </div>
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 leading-tight">
-                Innovating Excellence in Aluminium Formwork
+                Innovating Excellence in Aluminium Formwork & Mivan Shuttering
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed">
-                We are into Manufacturing of Aluminium Formwork shuttering, Design, Installation and Supervision. Aluminium Formwork Shuttering is used in the Construction of High Raised Residential, Commercial and Framed Structures, Villa housing projects.
+                We are leading manufacturers of Mivan shuttering and Aluminium Formwork shuttering, Design, Installation and Supervision services in India. Our Aluminium Formwork Shuttering systems are used in the Construction of High-Rise Residential Buildings, Commercial Structures, and Villa housing projects across India.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                It is a fast-paced construction technique that uses Aluminium Formwork to create strong and durable buildings and it is more economical than traditional construction methods because it requires less labour and time. It is also faster than traditional construction, more seismic resistance, smooth finishing of wall and slab, faster completion of floors, good quality of construction work with lesser joints and reduce leakages.
+                Mivan shuttering is a fast-paced construction technique that uses Aluminium Formwork to create strong and durable buildings. It is more economical than traditional construction methods because it requires less labour and time. Our aluminium formwork systems offer faster construction, better seismic resistance, smooth finishing of walls and slabs, faster completion of floors, superior quality construction work with fewer joints, and reduced leakages.
               </p>
             </div>
             <div className="relative h-96 lg:h-[500px] overflow-hidden shadow-2xl">
               <Image
                 src="/images/about/plant-clean.jpg"
-                alt="Aluminium formwork construction"
+                alt="Aluminium formwork and Mivan shuttering manufacturing plant in Hyderabad, Telangana"
                 fill
                 className="object-cover"
               />
@@ -64,15 +64,15 @@ export default function About() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="bg-[#F6F4F3] p-8">
-              <h3 className="text-xl font-bold text-[#131200] mb-4">The Formwork System</h3>
+              <h3 className="text-xl font-bold text-[#131200] mb-4">The Mivan Shuttering System</h3>
               <p className="text-[#131200] leading-relaxed">
-                The Formwork is the advanced system made of strong and sturdy Aluminium Components that has great strength, durability, simple to install, adaptable and is used in construction.
+                Our Mivan shuttering and Aluminium Formwork system is an advanced construction solution made of strong and sturdy Aluminium Components. It offers great strength, durability, simple installation, and adaptability for various construction projects in India.
               </p>
             </div>
             <div className="bg-[#F6F4F3] p-8  ">
-              <h3 className="text-xl font-bold text-[#131200] mb-4">Applications</h3>
+              <h3 className="text-xl font-bold text-[#131200] mb-4">Applications Across India</h3>
               <p className="text-[#131200] leading-relaxed">
-                Aluminium Formwork is majorly used in the places where the whole structures are made of concrete, the wall reinforcing steel is placed with the floor slab, prefabricated room-sized wall panels and floor slab panels are erected. The Aluminium alloy slabs are accurately made as per the required sizes.
+                Our Aluminium Formwork and Mivan shuttering systems are extensively used in high-rise buildings, residential projects, and villas across Hyderabad, Karnataka, Kolkata, etc. These systems are ideal for structures made entirely of concrete, where wall reinforcing steel is placed with floor slabs, and prefabricated room-sized wall panels and floor slab panels are erected. The Aluminium alloy slabs are accurately manufactured as per required sizes.
               </p>
             </div>
           </div>
@@ -295,16 +295,16 @@ export default function About() {
                 Experience Excellence with Alum Forms
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                At Alum Forms, our state-of-the-art aluminum formwork solutions are transforming the building industry. With years of experience and creativity, we provide construction projects of all sizes with unmatched quality, cost-effectiveness, and efficiency. Discover the possibilities with Alum Forms and get unparalleled construction quality.
+                At Alum Forms, our state-of-the-art Mivan shuttering and aluminium formwork solutions are transforming the building industry in Hyderabad, and across India. With 30+ years of experience and creativity, we provide construction projects of all sizes with unmatched quality, cost-effectiveness, and efficiency. Discover the possibilities with Alum Forms and get unparalleled construction quality.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed">
-                With our cutting-edge aluminum formwork system, we transform the construction industry and establish new benchmarks for productivity, timeliness, and quality in building projects across the globe. Developers, contractors, and other construction industry professionals may accomplish their objectives with assurance and accuracy thanks to our Alum Forms.
+                With our cutting-edge aluminium formwork and Mivan shuttering systems, we transform the construction industry and establish new benchmarks for productivity, timeliness, and quality in building projects across India. Developers, contractors, and other construction industry professionals may accomplish their objectives with assurance and accuracy thanks to our Alum Forms.
               </p>
             </div>
             <div className="relative h-96 lg:h-[500px] overflow-hidden   shadow-2xl">
               <Image
                 src="/images/about/about-excellence.jpg"
-                alt="Construction excellence"
+                alt="Aluminium formwork construction excellence in Hyderabad, Telangana - Alumforms projects"
                 fill
                 className="object-cover"
               />

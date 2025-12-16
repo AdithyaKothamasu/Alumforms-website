@@ -23,7 +23,7 @@ export default function Hero() {
   ];
 
   const headings = [
-    "Trusted Aluminium Formwork Partner",
+    "Trusted Mivan Shuttering & Aluminium Formwork Manufacturing in India",
     "From Design to Delivery, Excellence in Every Form",
     "Shaping Structures with Precision and Performance",
   ];
@@ -64,13 +64,13 @@ export default function Hero() {
           >
             <Image
               src={image}
-              alt={`Hero slide ${index + 1}`}
+              alt={`Mivan shuttering and aluminium formwork construction in Hyderabad, Telangana - Hero slide ${index + 1}`}
               fill
               className="object-cover"
               priority={index === 0}
             />
             {/* Dark overlay for better text readability */}
-            <div className="absolute inset-0 bg-black/50"></div>
+            <div className="absolute inset-0 bg-black/60"></div>
           </div>
         ))}
       </div>
