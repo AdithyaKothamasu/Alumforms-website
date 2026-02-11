@@ -23,9 +23,9 @@ export default function Hero() {
   ];
 
   const headings = [
-    "Trusted Mivan Shuttering & Aluminium Formwork Manufacturing in India",
-    "From Design to Delivery, Excellence in Every Form",
-    "Shaping Structures with Precision and Performance",
+    "Premium Aluminium Formwork Systems for Construction",
+    "Aluminium Formwork Manufacturer in India",
+    "Aluminium Formwork Supplier in Hyderabad",
   ];
 
   const prevHeadingRef = useRef(0);
@@ -58,8 +58,10 @@ export default function Hero() {
         {carouselImages.map((image, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-300 ${
-              index === currentSlide ? "opacity-100" : "opacity-0"
+            className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
+              index === currentSlide
+                ? "opacity-100 scale-100 z-0"
+                : "opacity-0 scale-105 z-0 pointer-events-none"
             }`}
           >
             <Image
@@ -82,24 +84,14 @@ export default function Hero() {
           <div className="flex-1 text-center md:text-left">
             {/* Main Hero Text with Animation */}
             <div className="h-20 md:h-24 relative overflow-visible">
-              {headings.map((heading, index) => {
-                const isActive = index === currentHeading;
-                const isLeaving = index === prevHeadingRef.current && prevHeadingRef.current !== currentHeading;
-                return (
-                  <h1
-                    key={index}
-                    className={`absolute text-2xl md:text-3xl lg:text-5xl font-bold leading-tight heading-anim ${
-                      isActive
-                        ? 'flip-in opacity-100 z-10'
-                        : isLeaving
-                        ? 'flip-out opacity-0 z-0'
-                        : 'opacity-0 pointer-events-none'
-                    }`}
-                  >
-                    <span className="block font-semibold">{heading}</span>
-                  </h1>
-                );
-              })}
+              <h1
+                key={currentHeading}
+                className="absolute text-2xl md:text-3xl lg:text-5xl font-bold leading-tight heading-anim flip-in opacity-100 z-10"
+              >
+                <span className="block font-semibold">
+                  {headings[currentHeading]}
+                </span>
+              </h1>
             </div>
             
             {/* Subtitle */}
@@ -117,7 +109,7 @@ export default function Hero() {
                 <span className="absolute inset-0 bg-linear-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
                 
                 <span className="relative font-light text-sm uppercase tracking-wide sm:text-md flex items-center gap-2">
-                  Discover More
+                  Contact Us
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </span>
               </button>
@@ -134,7 +126,7 @@ export default function Hero() {
               <span className="absolute inset-0 bg-linear-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
               
               <span className="relative font-light text-sm uppercase tracking-wide sm:text-md flex items-center gap-2">
-                Discover More
+                Contact Us
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
               </span>
             </button>

@@ -21,10 +21,10 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://alumforms.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Mivan Shuttering & Aluminium Formwork Manufacturers in Hyderabad, Telangana | Alumforms",
+    default: "Aluminium Formwork Manufacturer & Supplier in India | Alumforms",
     template: "%s | Alumforms"
   },
-  description: "Leading Mivan shuttering and aluminium formwork manufacturers in Hyderabad, Telangana, India. Expert design, installation, and supervision services for high-rise buildings, residential projects, and villas.",
+  description: "Alumforms is a leading aluminium formwork manufacturer and supplier in India, offering high-quality shuttering systems, fast delivery, and competitive pricing. Contact us today.",
   keywords: [
     "Mivan shuttering",
     "Aluminium formwork",
