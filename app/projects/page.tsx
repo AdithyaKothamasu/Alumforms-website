@@ -294,9 +294,6 @@ export default function Projects() {
             <h2 className="text-2xl font-semibold text-[#131200] sm:text-[2.5rem]">
               Let’s engineer your next landmark together.
             </h2>
-            <p className="max-w-3xl text-sm leading-relaxed text-[#1F1B11]/75 sm:text-base">
-              From rapid residential cycles to ambitious high-rise buildings and villa projects in Hyderabad, Telangana, and across India, our Mivan shuttering and aluminium formwork systems adapt to every brief. Share your drawings and we will prototype a casting sequence that keeps your programme ahead of schedule.
-            </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <button
                 className="bg-[#ECA72C] hover:bg-[#ECA72C] hover:text-white text-[#131200] font-light underline cursor-pointer uppercase text-sm tracking-wide px-8 py-2 transition-colors duration-300 shadow-lg hover:shadow-xl"
