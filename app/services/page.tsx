@@ -13,17 +13,17 @@ export default function Services() {
     },
     {
       title: "Design and Engineering Services",
-      description: "At ALUM FORMS, we offer comprehensive design and engineering services tailored to meet the unique requirements of each project. Our team of experienced engineers utilizes advanced software and cutting-edge technologies to develop customized solutions that optimize structural integrity, minimize material wastage, and enhance overall project efficiency. From initial concept to detailed design documentation, rely on our expertise to bring your vision to life with precision and innovation.",
+      description: "At ALUM FORMS, we offer comprehensive design and engineering services for Mivan shuttering and aluminium formwork systems tailored to meet the unique requirements of each project in Hyderabad, Telangana, and India. Our team of experienced engineers utilizes advanced software and cutting-edge technologies to develop customized solutions that optimize structural integrity, minimize material wastage, and enhance overall project efficiency. From initial concept to detailed design documentation, rely on our expertise to bring your vision to life with precision and innovation.",
       image: "/images/services/services-design.png"
     },
     {
       title: "Manufacturing and Supply",
-      description: "With state-of-the-art manufacturing facilities and stringent quality control measures, we ensure the production of high-quality aluminum formwork components that meet the highest industry standards. Our efficient supply chain management ensures timely delivery of components to your project site, minimizing downtime and optimizing project schedules. Count on us for reliable manufacturing and supply solutions that support the seamless execution of your construction projects.",
+      description: "With state-of-the-art manufacturing facilities in Siddipet, Telangana, and stringent quality control measures, we ensure the production of high-quality Mivan shuttering and aluminum formwork components that meet the highest industry standards. Our efficient supply chain management ensures timely delivery of components to project sites across Hyderabad, Telangana, and India, minimizing downtime and optimizing project schedules. Count on us for reliable manufacturing and supply solutions that support the seamless execution of your construction projects.",
       image: "/images/services/manufacturing.jpg"
     },
     {
       title: "Installation and Training",
-      description: "Our professional installation teams are equipped with the expertise and experience to ensure the seamless integration of aluminum formwork systems on your project site. With meticulous attention to detail and adherence to safety protocols, we guarantee efficient and precise installation, minimizing disruptions and maximizing productivity. Additionally, we provide comprehensive training programs to equip your team with the knowledge and skills required to operate the formwork systems effectively, ensuring optimal performance throughout the project duration.",
+      description: "Our professional installation teams are equipped with the expertise and experience to ensure the seamless integration of Mivan shuttering and aluminum formwork systems on your project site in Hyderabad, Telangana, and across India. With meticulous attention to detail and adherence to safety protocols, we guarantee efficient and precise installation, minimizing disruptions and maximizing productivity. Additionally, we provide comprehensive training programs to equip your team with the knowledge and skills required to operate the formwork systems effectively, ensuring optimal performance throughout the project duration.",
       image: "/images/services/services-installation.jpeg"
     }
   ];
@@ -63,7 +63,7 @@ export default function Services() {
                 Transforming Concepts into Concrete Reality
               </h1>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Explore our comprehensive range of innovative products and services tailored to elevate your construction projects. From advanced aluminium formwork systems to expert design and engineering solutions, we're here to empower your vision. Discover excellence, efficiency, and reliability with ALUM FORMS.
+                Explore our comprehensive range of innovative Mivan shuttering and aluminium formwork services tailored to elevate your construction projects in India. From advanced aluminium formwork systems to expert design and engineering solutions, we're here to empower your vision. Discover excellence, efficiency, and reliability with ALUM FORMS - serving high-rise buildings, residential projects, and villas.
               </p>
             </div>
             
@@ -71,7 +71,7 @@ export default function Services() {
             <div className="relative h-96 lg:h-[500px] overflow-hidden rounded-lg">
               <Image
                 src="/images/services/services-hero-2.jpg"
-                alt="Aluminium formwork panels and construction materials"
+                alt="Mivan shuttering and aluminium formwork panels and construction materials in Hyderabad, Telangana"
                 fill
                 className="object-cover"
                 priority
@@ -98,7 +98,7 @@ export default function Services() {
                 <div className="relative h-64 lg:h-full lg:w-[45%]">
                   <Image
                     src={service.image}
-                    alt={service.title}
+                    alt={`${service.title} - Aluminium formwork and Mivan shuttering services in Hyderabad, Telangana`}
                     fill
                     className="object-cover"
                   />
@@ -153,6 +153,23 @@ export default function Services() {
         </div>
       </section>
 
+      {/* Location Section */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <span className="text-sm font-semibold text-[#ECA72C] uppercase tracking-wider">
+              SERVING INDIA
+            </span>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#131200] mt-4 mb-6">
+              Aluminium Formwork Services Across India
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              As leading Mivan shuttering and aluminium formwork manufacturers and contractors, we proudly serve clients across India.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 lg:py-24 bg-[#131200]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -160,7 +177,7 @@ export default function Services() {
             Ready to Transform Your Project?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Get in touch with our expert team to discuss your construction needs
+            Get in touch with our expert team to discuss your Mivan shuttering and aluminium formwork needs in Hyderabad, Telangana, or anywhere in India
           </p>
           {/* <button
             onClick={() => window.location.href = '/contact'}

@@ -105,7 +105,7 @@ const projects: Project[] = [
 
 ];
 
-function ProjectCarousel({ images, accentColor }: { images: string[]; accentColor: string }) {
+function ProjectCarousel({ images, accentColor, projectTitle }: { images: string[]; accentColor: string; projectTitle: string }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [slidesToShow, setSlidesToShow] = useState(1);
@@ -169,7 +169,7 @@ function ProjectCarousel({ images, accentColor }: { images: string[]; accentColo
           >
             <Image
               src={src}
-              alt="Project highlight"
+              alt={`Aluminium formwork and Mivan shuttering project in Hyderabad, Telangana - ${projectTitle}`}
               fill
               priority={originalIndex === 0}
               sizes="(min-width: 1024px) 80vw, 100vw"
@@ -236,6 +236,9 @@ export default function Projects() {
               <h1 className="text-3xl font-semibold leading-tight sm:text-4xl lg:text-[3.5rem]">
                 Projects that push the skyline forward.
               </h1>
+              <p className="text-lg text-gray-300 mt-4">
+                High-rise buildings, residential projects, and villas built with our advanced aluminium formwork systems
+              </p>
             </div>
           </div>
         </div>
@@ -260,7 +263,7 @@ export default function Projects() {
                       <div className="h-px flex-1 bg-[#131200]/10" />
                     </div>
 
-                    <ProjectCarousel images={project.images} accentColor={project.accent} />
+                    <ProjectCarousel images={project.images} accentColor={project.accent} projectTitle={project.title} />
 
                     <div className="flex flex-col gap-6">
                       <div className="space-y-3">
@@ -291,9 +294,6 @@ export default function Projects() {
             <h2 className="text-2xl font-semibold text-[#131200] sm:text-[2.5rem]">
               Let’s engineer your next landmark together.
             </h2>
-            <p className="max-w-3xl text-sm leading-relaxed text-[#1F1B11]/75 sm:text-base">
-              From rapid residential cycles to ambitious civic statements, our aluminium systems adapt to every brief. Share your drawings and we will prototype a casting sequence that keeps your programme ahead of schedule.
-            </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <button
                 className="bg-[#ECA72C] hover:bg-[#ECA72C] hover:text-white text-[#131200] font-light underline cursor-pointer uppercase text-sm tracking-wide px-8 py-2 transition-colors duration-300 shadow-lg hover:shadow-xl"

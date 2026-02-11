@@ -69,7 +69,7 @@ export default function ClientsSection() {
                   <div className="bg-white rounded-lg p-2 flex items-center justify-center w-[240px] h-[160px]">
                     <Image
                       src={client.logo}
-                      alt={`${client.name} logo`}
+                      alt={`${client.name} - Aluminium formwork and Mivan shuttering client in Hyderabad, Telangana`}
                       width={180}
                       height={100}
                       className="w-full h-full object-contain"

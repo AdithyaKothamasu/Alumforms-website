@@ -406,7 +406,7 @@ function ComponentCard({ component }: ComponentCardProps) {
       >
         <Image
           src={component.image}
-          alt={component.name}
+          alt={`${component.name} - Aluminium formwork component manufactured in Hyderabad, Telangana`}
           width={200}
           height={200}
           className="object-contain max-h-full max-w-full"

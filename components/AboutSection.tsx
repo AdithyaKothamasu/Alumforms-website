@@ -17,7 +17,7 @@ export default function AboutSection() {
             
             {/* Introductory Paragraph */}
             <p className="text-md md:text-lg text-gray-600 leading-relaxed">
-              We at Alum Forms are innovators, problem solvers, and collaborators in your construction journey. We are more than just a supplier of manufacturing and construction solutions.
+              We at Alum Forms are innovators, problem solvers, and collaborators in your construction journey. As leading Mivan shuttering and aluminium formwork manufacturers in Hyderabad, Telangana, India, we are more than just a supplier of manufacturing and construction solutions.
             </p>
             
             {/* Three Sub-sections */}
@@ -73,7 +73,7 @@ export default function AboutSection() {
             <div className="relative h-[500px] rounded-lg overflow-hidden">
               <Image
                 src="/images/landing/about.jpg"
-                alt="Construction site with workers and equipment"
+                alt="Aluminium formwork and Mivan shuttering construction site in Hyderabad, Telangana with workers and equipment"
                 fill
                 className="object-contain"
                 priority={false}

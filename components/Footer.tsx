@@ -24,7 +24,7 @@ export default function Footer() {
             <h3 className="text-3xl font-extrabold tracking-tight mb-4 flex items-center gap-3">
               <Image
                 src="/images/brand-assets/Alumforms-icon-transparent.png"
-                alt="Alum Forms Logo"
+                alt="Alumforms Logo - Mivan Shuttering & Aluminium Formwork Manufacturers"
                 width={40}
                 height={40}
                 className="object-contain h-10 w-10"
@@ -32,7 +32,7 @@ export default function Footer() {
               />
               <Image
                 src="/images/brand-assets/Alumforms-text-minimal.png"
-                alt="Alum Forms Logo"
+                alt="Alumforms - Aluminium Formwork Manufacturers in Hyderabad, Telangana"
                 width={200}
                 height={200}
                 className="object-contain h-15"

@@ -64,7 +64,7 @@ export default function WhyChooseUs() {
       <div className="absolute inset-0 -z-10">
         <Image
           src="/images/landing/construction.jpg"
-          alt="Construction background"
+          alt="Mivan shuttering and aluminium formwork construction site in Hyderabad, Telangana"
           fill
           className="object-cover"
           priority={false}
