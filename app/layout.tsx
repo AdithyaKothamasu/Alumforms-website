@@ -229,6 +229,7 @@ export default function RootLayout({
     "@type": "Product",
     name: "Aluminium Formwork System",
     description: "High-quality aluminium formwork and Mivan shuttering systems for construction projects",
+    image: new URL("/images/brand-assets/Alumforms-logo-transparent.png", siteUrl).toString(),
     brand: {
       "@type": "Brand",
       name: "Alumforms",
@@ -238,7 +239,16 @@ export default function RootLayout({
       "@type": "Offer",
       availability: "https://schema.org/InStock",
       priceCurrency: "INR",
+      // Quote-based pricing; Google requires a numeric price for validation
+      price: "0",
+      priceValidUntil: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10),
       areaServed: ["Hyderabad", "Telangana", "India"],
+      hasMerchantReturnPolicy: {
+        "@type": "MerchantReturnPolicy",
+        applicableCountry: "IN",
+        returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
+      },
+      // shippingDetails omitted: cost is project-dependent, not fixed
     },
   };
 
