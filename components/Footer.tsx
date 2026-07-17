@@ -34,7 +34,7 @@ export default function Footer() {
                 alt="Alumforms - Aluminium Formwork Manufacturers in Hyderabad, Telangana"
                 width={200}
                 height={200}
-                className="h-15 w-auto object-contain"
+                className="h-15 object-contain"
                 priority={false}
               />
             </h3>
