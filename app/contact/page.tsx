@@ -81,7 +81,7 @@ export default function Contact() {
             fill
             className="object-cover"
             sizes="100vw"
-            priority
+            loading="eager"
           />
           {/* Dark Overlay for Readability */}
           <div className="absolute inset-0 bg-black/60"></div>

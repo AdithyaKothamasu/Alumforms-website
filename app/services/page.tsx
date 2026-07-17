@@ -75,7 +75,7 @@ export default function Services() {
                 fill
                 className="object-cover"
                 sizes="(min-width: 1024px) 50vw, 100vw"
-                priority
+                loading="eager"
               />
             </div>
           </div>
@@ -103,6 +103,7 @@ export default function Services() {
                     fill
                     className="object-cover"
                     sizes="(min-width: 1024px) 45vw, 100vw"
+                    loading="lazy"
                   />
                 </div>
 

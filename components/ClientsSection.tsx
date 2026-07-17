@@ -73,7 +73,7 @@ export default function ClientsSection() {
                       width={180}
                       height={100}
                       className="w-full h-full object-contain"
-                      priority={index === 0}
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -109,4 +109,3 @@ export default function ClientsSection() {
     </section>
   );
 }
-

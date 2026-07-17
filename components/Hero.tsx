@@ -26,6 +26,8 @@ export default function Hero() {
   ];
 
   const prevHeadingRef = useRef(0);
+  const previousSlide = (currentSlide - 1 + carouselImages.length) % carouselImages.length;
+  const nextSlide = (currentSlide + 1) % carouselImages.length;
   useEffect(() => {
     prevHeadingRef.current = currentHeading;
   }, [currentHeading]);
@@ -52,27 +54,34 @@ export default function Hero() {
     <div className="relative h-screen w-full overflow-hidden">
       {/* Full-screen Carousel Background */}
       <div className="relative h-full w-full">
-        {carouselImages.map((image, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
-              index === currentSlide
-                ? "opacity-100 scale-100 z-0"
-                : "opacity-0 scale-105 z-0 pointer-events-none"
-            }`}
-          >
-            <Image
-              src={image}
-              alt={`Mivan shuttering and aluminium formwork construction in Hyderabad, Telangana - Hero slide ${index + 1}`}
-              fill
-              className="object-cover"
-              sizes="100vw"
-              priority={index === 0}
-            />
-            {/* Dark overlay for better text readability */}
-            <div className="absolute inset-0 bg-black/60"></div>
-          </div>
-        ))}
+        {carouselImages.map((image, index) => {
+          const shouldRender = index === currentSlide || index === previousSlide || index === nextSlide;
+
+          if (!shouldRender) return null;
+
+          return (
+            <div
+              key={index}
+              className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
+                index === currentSlide
+                  ? "opacity-100 scale-100 z-0"
+                  : "pointer-events-none z-0 scale-105 opacity-0"
+              }`}
+            >
+              <Image
+                src={image}
+                alt={`Mivan shuttering and aluminium formwork construction in Hyderabad, Telangana - Hero slide ${index + 1}`}
+                fill
+                className="object-cover"
+                sizes="100vw"
+                priority={index === 0}
+                loading={index === 0 ? "eager" : "lazy"}
+              />
+              {/* Dark overlay for better text readability */}
+              <div className="absolute inset-0 bg-black/60"></div>
+            </div>
+          );
+        })}
       </div>
 
       {/* Hero Content Overlay */}

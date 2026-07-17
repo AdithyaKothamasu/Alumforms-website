@@ -69,7 +69,7 @@ export default function WhyChooseUs() {
           fill
           className="object-cover"
           sizes="100vw"
-          priority={false}
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-black/70" />
       </div>
@@ -104,4 +104,3 @@ export default function WhyChooseUs() {
     </section>
   );
 }
-

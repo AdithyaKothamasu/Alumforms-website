@@ -18,7 +18,7 @@ export default function About() {
                 fill
                 className="object-cover"
                 sizes="100vw"
-                priority
+                loading="eager"
               />
           <div className="absolute inset-0 bg-black/70"></div>
         </div>
@@ -61,6 +61,7 @@ export default function About() {
                 fill
                 className="object-cover"
                 sizes="(min-width: 1024px) 50vw, 100vw"
+                loading="lazy"
               />
             </div>
           </div>
@@ -311,6 +312,7 @@ export default function About() {
                 fill
                 className="object-cover"
                 sizes="(min-width: 1024px) 50vw, 100vw"
+                loading="lazy"
               />
             </div>
         </div>
