@@ -17,6 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://alumforms.com";
+const priceValidUntil = "2027-12-31";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -241,7 +242,7 @@ export default function RootLayout({
       priceCurrency: "INR",
       // Quote-based pricing; Google requires a numeric price for validation
       price: "0",
-      priceValidUntil: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10),
+      priceValidUntil,
       areaServed: ["Hyderabad", "Telangana", "India"],
       hasMerchantReturnPolicy: {
         "@type": "MerchantReturnPolicy",

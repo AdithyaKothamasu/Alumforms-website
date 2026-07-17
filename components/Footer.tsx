@@ -8,7 +8,6 @@ import {
   IconMapPin,
   IconBrandFacebook,
   IconBrandInstagram,
-  IconBrandLinkedin,
 } from "@tabler/icons-react";
 
 export default function Footer() {
@@ -35,7 +34,7 @@ export default function Footer() {
                 alt="Alumforms - Aluminium Formwork Manufacturers in Hyderabad, Telangana"
                 width={200}
                 height={200}
-                className="object-contain h-15"
+                className="h-15 w-auto object-contain"
                 priority={false}
               />
             </h3>
@@ -115,4 +114,3 @@ export default function Footer() {
     </footer>
   );
 }
-

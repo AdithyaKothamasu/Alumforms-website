@@ -4,51 +4,88 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import WhatsAppFloatingButton from "../../components/WhatsAppFloatingButton";
+import { mediaPath } from "../../lib/media";
+
+type ProjectMedia =
+  | {
+      type: "image";
+      src: string;
+      alt: string;
+    }
+  | {
+      type: "video";
+      src: string;
+      title: string;
+      poster?: string;
+    };
 
 type Project = {
   title: string;
   location: string;
   sector: string;
   accent: string;
-  images: string[];
+  media: ProjectMedia[];
 };
 
-const projectImageSources: Record<string, string[]> = {
+const projectImage = (src: string, projectTitle: string): ProjectMedia => ({
+  type: "image",
+  src: mediaPath(src),
+  alt: `Aluminium formwork and Mivan shuttering project in Hyderabad, Telangana - ${projectTitle}`,
+});
+
+const projectVideo = (src: string, title: string, poster?: string): ProjectMedia => ({
+  type: "video",
+  src: mediaPath(src),
+  title,
+  poster: poster ? mediaPath(poster) : undefined,
+});
+
+const projectMediaSources: Record<string, ProjectMedia[]> = {
   jayabheriProperties: [
-    "/images/projects/jayabheri/jayabheri-block-b.png",
-    "/images/projects/jayabheri/jayabheri-new.jpeg", 
-    "/images/projects/jayabheri/jayabheri-block-g.png", 
-    "/images/projects/jayabheri/jayabheri-block-d.png",
+    projectImage("/images/projects/jayabheri/jayabheri-block-b.png", "Jayabheri SAHASRA"),
+    projectImage("/images/projects/jayabheri/jayabheri-new.jpeg", "Jayabheri SAHASRA"),
+    projectImage("/images/projects/jayabheri/jayabheri-block-g.png", "Jayabheri SAHASRA"),
+    projectImage("/images/projects/jayabheri/jayabheri-block-d.png", "Jayabheri SAHASRA"),
   ],
   deepthiNirmaanProjects: [
-    "/images/projects/deepthi-nirmaan/deepthi-nirmaan4.jpeg",
-    "/images/projects/deepthi-nirmaan/deepthi-nirmaan2.jpeg",
-    "/images/projects/deepthi-nirmaan/deepthi-nirmaan1.jpeg", 
-     "/images/projects/deepthi-nirmaan/deepthi-nirmaan3.jpeg", 
-    ],
-  rasaInfraframe:[
-    "/images/projects/gulbarga/rasa-4.jpeg",
-    "/images/projects/gulbarga/rasa-2.jpeg",
-    "/images/projects/gulbarga/rasa-1.jpeg", 
-    "/images/projects/gulbarga/rasa-3.jpeg",
+    projectImage("/images/projects/deepthi-nirmaan/deepthi-nirmaan4.jpeg", "Deepthi Nirmaan Projects Pvt Ltd"),
+    projectImage("/images/projects/deepthi-nirmaan/deepthi-nirmaan2.jpeg", "Deepthi Nirmaan Projects Pvt Ltd"),
+    projectImage("/images/projects/deepthi-nirmaan/deepthi-nirmaan1.jpeg", "Deepthi Nirmaan Projects Pvt Ltd"),
+    projectImage("/images/projects/deepthi-nirmaan/deepthi-nirmaan3.jpeg", "Deepthi Nirmaan Projects Pvt Ltd"),
   ],
-  meeraShantivanam:[
-    "/images/projects/meera/meera-4.jpeg",
-    "/images/projects/meera/meera-2.jpeg",
-    "/images/projects/meera/meera-1.jpeg", 
-    "/images/projects/meera/meera-3.jpeg",
+  rasaInfraframe: [
+    projectImage("/images/projects/gulbarga/rasa-4.jpeg", "Rasa Infra Frame"),
+    projectImage("/images/projects/gulbarga/rasa-2.jpeg", "Rasa Infra Frame"),
+    projectImage("/images/projects/gulbarga/rasa-1.jpeg", "Rasa Infra Frame"),
+    projectImage("/images/projects/gulbarga/rasa-3.jpeg", "Rasa Infra Frame"),
   ],
-  shreeji:[
-    "/images/projects/shreeji/shreeji-4.jpeg",
-    "/images/projects/shreeji/shreeji-2.jpeg",
-    "/images/projects/shreeji/shreeji-1.jpeg", 
-    "/images/projects/shreeji/shreeji-3.jpeg",
+  meeraShantivanam: [
+    projectImage("/images/projects/meera/meera-4.jpeg", "Meera Shanthivanam Pvt Ltd"),
+    projectImage("/images/projects/meera/meera-2.jpeg", "Meera Shanthivanam Pvt Ltd"),
+    projectImage("/images/projects/meera/meera-1.jpeg", "Meera Shanthivanam Pvt Ltd"),
+    projectImage("/images/projects/meera/meera-3.jpeg", "Meera Shanthivanam Pvt Ltd"),
   ],
-  pmr:[
-    "/images/projects/pmr/pmr-1.jpeg", 
-    "/images/projects/pmr/pmr-2.jpeg",
-    "/images/projects/pmr/pmr-3.jpeg",
-    "/images/projects/pmr/pmr-5.jpeg",
+  shreeji: [
+    projectImage("/images/projects/shreeji/shreeji-4.jpeg", "Shreeji Infra"),
+    projectImage("/images/projects/shreeji/shreeji-2.jpeg", "Shreeji Infra"),
+    projectImage("/images/projects/shreeji/shreeji-1.jpeg", "Shreeji Infra"),
+    projectImage("/images/projects/shreeji/shreeji-3.jpeg", "Shreeji Infra"),
+  ],
+  pmr: [
+    projectImage("/images/projects/pmr/pmr-1.jpeg", "PMR Group - Dithya Agartha"),
+    projectImage("/images/projects/pmr/pmr-2.jpeg", "PMR Group - Dithya Agartha"),
+    projectImage("/images/projects/pmr/pmr-3.jpeg", "PMR Group - Dithya Agartha"),
+    projectImage("/images/projects/pmr/pmr-5.jpeg", "PMR Group - Dithya Agartha"),
+  ],
+  sharadchandrika: [
+    projectImage("/images/projects/sharadchandrika/sc-1.jpeg", "Sharadchandrika Infra Projects"),
+    projectImage("/images/projects/sharadchandrika/sc-2.jpeg", "Sharadchandrika Infra Projects"),
+    projectVideo(
+      "/images/projects/sharadchandrika/sc-vid.mp4",
+      "Sharadchandrika Infra Projects site video",
+      "/images/projects/sharadchandrika/sc-vid-thumbnail.jpeg"
+    ),
+    projectImage("/images/projects/sharadchandrika/sc-3.jpeg", "Sharadchandrika Infra Projects"),
   ],
 };
 
@@ -58,14 +95,14 @@ const projects: Project[] = [
     location: "Gowlidoddy, Hyderabad",
     sector: "High-Rise Residential",
     accent: "#ECA72C",
-    images: projectImageSources.jayabheriProperties,
+    media: projectMediaSources.jayabheriProperties,
   },
   {
     title: "Deepthi Nirmaan Projects Pvt Ltd",
     location: "Adibatla, Hyderabad",
     sector: "Individual Housing",
     accent: "#ECA72C",
-    images: projectImageSources.deepthiNirmaanProjects,
+    media: projectMediaSources.deepthiNirmaanProjects,
   },
   // {
   //   title: "Deepthi Enterprises",
@@ -79,33 +116,47 @@ const projects: Project[] = [
     location: "Gulbarga, Karnataka",
     sector: "Residential Apartments",
     accent: "#B1731D",
-    images: projectImageSources.rasaInfraframe,
+    media: projectMediaSources.rasaInfraframe,
   },
   {
     title: "Meera Shanthivanam Pvt Ltd",
     location: "Kanha village, Nandigama, Hyderabad",
     sector: "Residential Apartments",
     accent: "#F4B942",
-    images: projectImageSources.meeraShantivanam,
+    media: projectMediaSources.meeraShantivanam,
   },
   {
     title: "Shreeji Infra",
     location: "Gurramguda, Balapur, Hyderabad",
     sector: "Villa Housing",
     accent: "#E1A233",
-    images: projectImageSources.shreeji,
+    media: projectMediaSources.shreeji,
   },
   {
     title: "PMR Group - Dithya Agartha",
     location: "Kompally, Hyderabad",
     sector: "High-Rise luxury Apartments",
     accent: "#E1A233",
-    images: projectImageSources.pmr,
+    media: projectMediaSources.pmr,
   },
-
+  {
+    title: "Sharadchandrika Infra Projects",
+    location: "Tellapur, Hyderabad, Telangana",
+    sector: "Villa Housing",
+    accent: "#ECA72C",
+    media: projectMediaSources.sharadchandrika,
+  },
 ];
 
-function ProjectCarousel({ images, accentColor, projectTitle }: { images: string[]; accentColor: string; projectTitle: string }) {
+function ProjectCarousel({
+  media,
+  accentColor,
+  eagerFirstImage = false,
+}: {
+  media: ProjectMedia[];
+  accentColor: string;
+  eagerFirstImage?: boolean;
+}) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [slidesToShow, setSlidesToShow] = useState(1);
@@ -113,19 +164,16 @@ function ProjectCarousel({ images, accentColor, projectTitle }: { images: string
   useEffect(() => {
     const updateSlidesToShow = () => {
       const isLargeScreen = window.innerWidth >= 1024;
-      setSlidesToShow(isLargeScreen && images.length >= 2 ? 2 : 1);
+      setSlidesToShow(isLargeScreen && media.length >= 2 ? 2 : 1);
     };
 
     updateSlidesToShow();
     window.addEventListener("resize", updateSlidesToShow);
     return () => window.removeEventListener("resize", updateSlidesToShow);
-  }, [images.length]);
+  }, [media.length]);
 
-  useEffect(() => {
-    setActiveIndex(0);
-  }, [slidesToShow, images.length]);
-
-  const totalSlides = Math.max(1, Math.ceil(images.length / slidesToShow));
+  const totalSlides = Math.max(1, Math.ceil(media.length / slidesToShow));
+  const safeActiveIndex = activeIndex % totalSlides;
 
   useEffect(() => {
     if (isPaused || totalSlides <= 1) return undefined;
@@ -141,15 +189,15 @@ function ProjectCarousel({ images, accentColor, projectTitle }: { images: string
     setActiveIndex((prev) => (prev + direction + totalSlides) % totalSlides);
   };
 
-  const startIndex = activeIndex * slidesToShow;
-  let visibleImages = images
+  const startIndex = safeActiveIndex * slidesToShow;
+  let visibleMedia = media
     .slice(startIndex, startIndex + slidesToShow)
-    .map((src, localIndex) => ({ src, originalIndex: startIndex + localIndex }));
+    .map((item, localIndex) => ({ item, originalIndex: startIndex + localIndex }));
 
-  if (visibleImages.length < slidesToShow && images.length > slidesToShow) {
-    const remainder = slidesToShow - visibleImages.length;
-    visibleImages = visibleImages.concat(
-      images.slice(0, remainder).map((src, localIndex) => ({ src, originalIndex: localIndex }))
+  if (visibleMedia.length < slidesToShow && media.length > slidesToShow) {
+    const remainder = slidesToShow - visibleMedia.length;
+    visibleMedia = visibleMedia.concat(
+      media.slice(0, remainder).map((item, localIndex) => ({ item, originalIndex: localIndex }))
     );
   }
 
@@ -162,19 +210,32 @@ function ProjectCarousel({ images, accentColor, projectTitle }: { images: string
       onMouseLeave={() => setIsPaused(false)}
     >
       <div className={`grid w-full grid-cols-1 gap-0.5 ${gridColumnsClass}`}>
-        {visibleImages.map(({ src, originalIndex }) => (
+        {visibleMedia.map(({ item, originalIndex }) => (
           <div
-            key={`${src}-${originalIndex}`}
+            key={`${item.src}-${originalIndex}`}
             className="relative flex w-full items-center justify-center overflow-hidden bg-[#050403] h-100 lg:h-150"
           >
-            <Image
-              src={src}
-              alt={`Aluminium formwork and Mivan shuttering project in Hyderabad, Telangana - ${projectTitle}`}
-              fill
-              priority={originalIndex === 0}
-              sizes="(min-width: 1024px) 80vw, 100vw"
-              className="object-fill object-top"
-            />
+            {item.type === "image" ? (
+              <Image
+                src={item.src}
+                alt={item.alt}
+                fill
+                priority={eagerFirstImage && originalIndex === 0}
+                sizes="(min-width: 1280px) 560px, (min-width: 1024px) 44vw, 100vw"
+                className="object-cover object-top"
+              />
+            ) : (
+              <video
+                src={item.src}
+                poster={item.poster}
+                title={item.title}
+                controls
+                playsInline
+                preload="metadata"
+                className="h-full w-full object-cover"
+                onPlay={() => setIsPaused(true)}
+              />
+            )}
           </div>
         ))}
       </div>
@@ -206,9 +267,9 @@ function ProjectCarousel({ images, accentColor, projectTitle }: { images: string
                 onClick={() => setActiveIndex(index)}
                 className="h-2.5 w-2.5 rounded-full transition-opacity cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
                 style={{
-                  backgroundColor: index === activeIndex ? accentColor : "black",
-                  opacity: index === activeIndex ? 1 : 0.7,
-                  boxShadow: index === activeIndex ? `0 0 0 4px rgba(0,0,0,0.35)` : "none",
+                  backgroundColor: index === safeActiveIndex ? accentColor : "black",
+                  opacity: index === safeActiveIndex ? 1 : 0.7,
+                  boxShadow: index === safeActiveIndex ? `0 0 0 4px rgba(0,0,0,0.35)` : "none",
                 }}
               />
             ))}
@@ -263,7 +324,11 @@ export default function Projects() {
                       <div className="h-px flex-1 bg-[#131200]/10" />
                     </div>
 
-                    <ProjectCarousel images={project.images} accentColor={project.accent} projectTitle={project.title} />
+                    <ProjectCarousel
+                      media={project.media}
+                      accentColor={project.accent}
+                      eagerFirstImage={index === 0}
+                    />
 
                     <div className="flex flex-col gap-6">
                       <div className="space-y-3">

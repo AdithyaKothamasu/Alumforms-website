@@ -5,6 +5,7 @@ import { IconSearch, IconShieldCheck, IconSettings, IconBulb } from "@tabler/ico
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { mediaPath } from "../lib/media";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -63,10 +64,11 @@ export default function WhyChooseUs() {
       {/* Background image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/images/landing/construction.jpg"
+          src={mediaPath("/images/landing/construction.jpg")}
           alt="Mivan shuttering and aluminium formwork construction site in Hyderabad, Telangana"
           fill
           className="object-cover"
+          sizes="100vw"
           priority={false}
         />
         <div className="absolute inset-0 bg-black/70" />
@@ -102,5 +104,4 @@ export default function WhyChooseUs() {
     </section>
   );
 }
-
 

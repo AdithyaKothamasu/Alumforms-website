@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Factory, Users, Target, Award, Building2, Lightbulb } from 'lucide-react';
 import WhatsAppFloatingButton from "../../components/WhatsAppFloatingButton";
+import { mediaPath } from "../../lib/media";
 
 export default function About() {
   return (
@@ -12,10 +13,11 @@ export default function About() {
       <section className="relative h-[50vh] overflow-hidden">
         <div className="absolute inset-0">
               <Image
-                src="/images/about/plant.jpg"
+                src={mediaPath("/images/about/plant.jpg")}
                 alt="Alumforms manufacturing plant - Mivan shuttering and aluminium formwork manufacturers in Hyderabad, Telangana"
                 fill
                 className="object-cover"
+                sizes="100vw"
                 priority
               />
           <div className="absolute inset-0 bg-black/70"></div>
@@ -54,10 +56,11 @@ export default function About() {
             </div>
             <div className="relative h-96 lg:h-[500px] overflow-hidden shadow-2xl">
               <Image
-                src="/images/about/plant-clean.jpg"
+                src={mediaPath("/images/about/plant-clean.jpg")}
                 alt="Aluminium formwork and Mivan shuttering manufacturing plant in Hyderabad, Telangana"
                 fill
                 className="object-cover"
+                sizes="(min-width: 1024px) 50vw, 100vw"
               />
             </div>
           </div>
@@ -303,10 +306,11 @@ export default function About() {
             </div>
             <div className="relative h-96 lg:h-[500px] overflow-hidden   shadow-2xl">
               <Image
-                src="/images/about/about-excellence.jpg"
+                src={mediaPath("/images/about/about-excellence.jpg")}
                 alt="Aluminium formwork construction excellence in Hyderabad, Telangana - Alumforms projects"
                 fill
                 className="object-cover"
+                sizes="(min-width: 1024px) 50vw, 100vw"
               />
             </div>
         </div>

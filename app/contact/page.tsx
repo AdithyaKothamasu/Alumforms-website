@@ -4,9 +4,9 @@ import { useState } from "react";
 import Image from "next/image";
 import content from "../../content/site-content.json";
 import WhatsAppFloatingButton from "../../components/WhatsAppFloatingButton";
+import { mediaPath } from "../../lib/media";
 
 export default function Contact() {
-  const pageCopy = content.pages.contact;
   const contactInfo = content.contact;
 
   const [formValues, setFormValues] = useState({
@@ -61,7 +61,7 @@ export default function Contact() {
 
       setStatus({ type: "success", message: "Thanks! We received your message and will get back soon." });
       setFormValues({ name: "", company: "", email: "", phone: "", message: "" });
-    } catch (err) {
+    } catch {
       setStatus({ type: "error", message: "Something went wrong. Please try again later." });
     } finally {
       setSubmitting(false);
@@ -76,10 +76,11 @@ export default function Contact() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/about/plant-clean.jpg"
+            src={mediaPath("/images/about/plant-clean.jpg")}
             alt="Alumforms manufacturing plant - Mivan shuttering and aluminium formwork manufacturers in Hyderabad, Telangana"
             fill
             className="object-cover"
+            sizes="100vw"
             priority
           />
           {/* Dark Overlay for Readability */}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -63,6 +63,18 @@ const components: Component[] = [
   },
 ];
 
+const subscribeToResize = (callback: () => void) => {
+  window.addEventListener("resize", callback);
+  return () => window.removeEventListener("resize", callback);
+};
+
+const getVisibleCards = () => {
+  const width = window.innerWidth;
+  if (width >= 1024) return 4;
+  if (width >= 768) return 3;
+  return 1;
+};
+
 export default function ComponentsCarousel() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
@@ -71,8 +83,7 @@ export default function ComponentsCarousel() {
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
-  // Keep server and first client render identical; update after mount
-  const [visibleCards, setVisibleCards] = useState<number>(4);
+  const visibleCards = useSyncExternalStore(subscribeToResize, getVisibleCards, () => 4);
 
   // GSAP animations
   useEffect(() => {
@@ -114,39 +125,16 @@ export default function ComponentsCarousel() {
     return () => ctx.revert();
   }, []);
 
-  // Calculate visible cards based on viewport AFTER mount to avoid hydration mismatch
-  useEffect(() => {
-    const computeVisible = () => {
-      const width = window.innerWidth;
-      if (width >= 1024) return 4;
-      if (width >= 768) return 3;
-      return 1; // use integer to simplify pagination and avoid fractional widths
-    };
-    setVisibleCards(computeVisible());
-    const onResize = () => setVisibleCards(computeVisible());
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
+  const maxIndex = Math.max(0, components.length - visibleCards);
+  const displayIndex = Math.min(currentIndex, maxIndex);
+
+  const goToPrev = useCallback(() => {
+    setCurrentIndex((prev) => Math.max(0, prev - 1));
   }, []);
 
-  const maxIndex = Math.max(0, components.length - visibleCards);
-
-  // Clamp index when layout changes
-  useEffect(() => {
-    const max = Math.max(0, components.length - visibleCards);
-    if (currentIndex > max) setCurrentIndex(max);
-  }, [visibleCards, currentIndex]);
-
-  const goToPrev = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
-  };
-
-  const goToNext = () => {
-    if (currentIndex < maxIndex) {
-      setCurrentIndex(currentIndex + 1);
-    }
-  };
+  const goToNext = useCallback(() => {
+    setCurrentIndex((prev) => Math.min(maxIndex, prev + 1));
+  }, [maxIndex]);
 
   // Touch/Drag handlers
   const handleMouseDown = (e: React.MouseEvent) => {
@@ -177,9 +165,9 @@ export default function ComponentsCarousel() {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [currentIndex, maxIndex]);
+  }, [goToNext, goToPrev]);
 
-  const translateX = -currentIndex * (100 / visibleCards);
+  const translateX = -displayIndex * (100 / visibleCards);
 
   return (
 
@@ -262,7 +250,7 @@ export default function ComponentsCarousel() {
                 transform: `translateX(${translateX}%)`,
               }}
             >
-              {components.map((component, index) => (
+              {components.map((component) => (
                 <div
                   key={component.name}
                   className="shrink-0 px-4"
@@ -279,10 +267,10 @@ export default function ComponentsCarousel() {
           {/* Navigation Buttons */}
           <button
             onClick={goToPrev}
-            disabled={currentIndex === 0}
+            disabled={displayIndex === 0}
             aria-label="Previous component"
             className={`absolute left-0 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full shadow-lg transition-all duration-300 ${
-              currentIndex === 0
+              displayIndex === 0
                 ? "bg-gray-200 text-gray-400 cursor-not-allowed md:-translate-x-10"
                 : "bg-white text-gray-900 hover:text-[#ECA72C] md:-translate-x-10 md:hover:-translate-x-10 hover:scale-110 cursor-pointer hover:-translate-x-1"
             }`}
@@ -304,10 +292,10 @@ export default function ComponentsCarousel() {
 
           <button
             onClick={goToNext}
-            disabled={currentIndex >= maxIndex}
+            disabled={displayIndex >= maxIndex}
             aria-label="Next component"
             className={`absolute right-0 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full shadow-lg transition-all duration-300 ${
-              currentIndex >= maxIndex
+              displayIndex >= maxIndex
                 ? "bg-gray-200 text-gray-400 cursor-not-allowed md:translate-x-10"
                 : "bg-white text-gray-900 hover:text-[#ECA72C] md:translate-x-10 md:hover:translate-x-10 cursor-pointer hover:-translate-x-1 hover:scale-110"
             }`}
@@ -339,7 +327,7 @@ export default function ComponentsCarousel() {
                   }}
                   aria-label={`Go to slide ${index + 1}`}
                   className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    Math.floor(currentIndex / visibleCards) === index
+                    Math.floor(displayIndex / visibleCards) === index
                       ? "bg-[#ECA72C] w-8"
                       : "bg-[#7A7978] hover:bg-[#ECA72C] cursor-pointer"
                   }`}
@@ -421,4 +409,3 @@ function ComponentCard({ component }: ComponentCardProps) {
     </div>
   );
 }
-

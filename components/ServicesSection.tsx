@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { mediaPath } from "../lib/media";
 
 export default function ServicesSection() {
   return (
@@ -11,10 +12,11 @@ export default function ServicesSection() {
           <div className="hidden md:block relative order-2 lg:order-1">
             <div className="relative h-96 lg:h-[500px] overflow-hidden">
               <Image
-                src="/images/landing/services.jpg"
+                src={mediaPath("/images/landing/services.jpg")}
                 alt="Mivan shuttering and aluminium formwork panels and construction materials in Hyderabad, Telangana"
                 fill
                 className="object-contain"
+                sizes="(min-width: 1024px) 50vw, 100vw"
                 priority={false}
               />
             </div>
@@ -34,7 +36,7 @@ export default function ServicesSection() {
             
             {/* Descriptive Paragraph */}
             <p className="text-lg text-gray-600 leading-relaxed">
-              Explore our comprehensive range of innovative Mivan shuttering and aluminium formwork systems tailored to elevate your construction projects in Hyderabad, Telangana, and across India. From advanced aluminium formwork systems to expert design and engineering solutions, we're here to empower your vision. Discover excellence, efficiency, and reliability with Alum Forms.
+              Explore our comprehensive range of innovative Mivan shuttering and aluminium formwork systems tailored to elevate your construction projects in Hyderabad, Telangana, and across India. From advanced aluminium formwork systems to expert design and engineering solutions, we&apos;re here to empower your vision. Discover excellence, efficiency, and reliability with Alum Forms.
             </p>
             
             {/* Call to Action Button */}

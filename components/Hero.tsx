@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { ArrowRight } from 'lucide-react';
+import { mediaPath } from "../lib/media";
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -11,14 +11,11 @@ export default function Hero() {
   
   // Carousel images - using available images from your project
   const carouselImages = [
-    // "/images/landing/hero/hero-6.jpg",
-    // "/images/landing/hero/hero-3.jpg",
-    // "/images/landing/hero/pallette.jpg",
-    "/images/landing/hero/hero-9-up.jpg",
-    "/images/landing/hero/hero-10.jpg",
-    "/images/landing/hero/hero-7.jpg",
-    "/images/landing/hero/hero-8-up.png",
-    "/images/landing/hero/hero-5.jpg",
+    mediaPath("/images/landing/hero/hero-9-up.jpg"),
+    mediaPath("/images/landing/hero/hero-10.jpg"),
+    mediaPath("/images/landing/hero/hero-7.jpg"),
+    mediaPath("/images/landing/hero/hero-8-up.png"),
+    mediaPath("/images/landing/hero/hero-5.jpg"),
 
   ];
 
@@ -69,6 +66,7 @@ export default function Hero() {
               alt={`Mivan shuttering and aluminium formwork construction in Hyderabad, Telangana - Hero slide ${index + 1}`}
               fill
               className="object-cover"
+              sizes="100vw"
               priority={index === 0}
             />
             {/* Dark overlay for better text readability */}

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Lightbulb } from "lucide-react";
+import { mediaPath } from "../lib/media";
 
 export default function AboutSection() {
   return (
@@ -72,10 +73,11 @@ export default function AboutSection() {
           <div className="hidden md:block relative">
             <div className="relative h-[500px] rounded-lg overflow-hidden">
               <Image
-                src="/images/landing/about.jpg"
+                src={mediaPath("/images/landing/about.jpg")}
                 alt="Aluminium formwork and Mivan shuttering construction site in Hyderabad, Telangana with workers and equipment"
                 fill
                 className="object-contain"
+                sizes="(min-width: 1024px) 50vw, 100vw"
                 priority={false}
               />
             </div>
