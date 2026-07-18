@@ -9,10 +9,9 @@ export default function WhatsAppFloatingButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"
-      className="fixed top-1/2 right-4 z-50 flex -translate-y-1/2 translate-x-0 items-center justify-center rounded-full bg-[#25D366] px-4 py-3 text-white opacity-100 shadow-lg transition focus:outline-none focus:ring-2 focus:ring-[#25D366]/50"
+      className="fixed right-4 bottom-5 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition hover:bg-[#1FBA57] focus:outline-none focus:ring-2 focus:ring-[#25D366]/50 md:top-1/2 md:bottom-auto md:-translate-y-1/2"
     >
       <IconBrandWhatsapp className="w-6 h-6" />
     </a>
   );
 }
-

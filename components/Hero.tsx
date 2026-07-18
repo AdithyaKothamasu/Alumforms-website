@@ -1,182 +1,209 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useEffect, useRef } from "react";
-import { ArrowRight } from 'lucide-react';
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import { mediaPath } from "../lib/media";
+
+const slides = [
+  {
+    src: mediaPath("/images/landing/hero/hero-5.jpg"),
+    alt: "Alumforms specialist manufacturing aluminium formwork at the Hyderabad factory",
+    position: "object-[52%_center] md:object-center",
+  },
+  {
+    src: mediaPath("/images/landing/hero/hero-10.jpg"),
+    alt: "Complete aluminium formwork system assembled for inspection at the Alumforms factory",
+    position: "object-[55%_center] md:object-center",
+  },
+  {
+    src: mediaPath("/images/projects/sharadchandrika/sc-1.jpeg"),
+    alt: "Aluminium formwork in use at the Sharadchandrika Infra Projects construction site",
+    position: "object-[58%_center] md:object-center",
+  },
+];
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [currentHeading, setCurrentHeading] = useState(0);
-  
-  // Carousel images - using available images from your project
-  const carouselImages = [
-    mediaPath("/images/landing/hero/hero-9-up.jpg"),
-    mediaPath("/images/landing/hero/hero-10.jpg"),
-    mediaPath("/images/landing/hero/hero-7.jpg"),
-    mediaPath("/images/landing/hero/hero-8-up.png"),
-    mediaPath("/images/landing/hero/hero-5.jpg"),
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const heroRef = useRef<HTMLElement>(null);
+  const mediaRef = useRef<HTMLDivElement>(null);
+  const contentMotionRef = useRef<HTMLDivElement>(null);
 
-  ];
-
-  const headings = [
-    "Premium Aluminium Formwork Systems for Construction",
-    "Aluminium Formwork Manufacturer in India",
-    "Aluminium Formwork Supplier in Hyderabad",
-  ];
-
-  const prevHeadingRef = useRef(0);
-  const previousSlide = (currentSlide - 1 + carouselImages.length) % carouselImages.length;
-  const nextSlide = (currentSlide + 1) % carouselImages.length;
   useEffect(() => {
-    prevHeadingRef.current = currentHeading;
-  }, [currentHeading]);
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const updateMotionPreference = () => setPrefersReducedMotion(mediaQuery.matches);
 
-  // Auto-advance carousel
+    updateMotionPreference();
+    mediaQuery.addEventListener("change", updateMotionPreference);
+    return () => mediaQuery.removeEventListener("change", updateMotionPreference);
+  }, []);
+
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
-    }, 2000); // Change slide every 2 seconds
+    if (prefersReducedMotion) return undefined;
 
-    return () => clearInterval(timer);
-  }, [carouselImages.length]);
+    const timer = window.setInterval(() => {
+      setCurrentSlide((previous) => (previous + 1) % slides.length);
+    }, 8000);
 
-  // Auto-advance headings
+    return () => window.clearInterval(timer);
+  }, [prefersReducedMotion]);
+
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentHeading((prev) => (prev + 1) % headings.length);
-    }, 5000); // Change heading every 5 seconds
+    if (prefersReducedMotion) return undefined;
 
-    return () => clearInterval(timer);
-  }, [headings.length]);
+    let animationFrame = 0;
+    const updateScrollMotion = () => {
+      animationFrame = 0;
+      const hero = heroRef.current;
+      if (!hero) return;
+
+      const progress = Math.min(Math.max(window.scrollY / (hero.offsetHeight * 0.85), 0), 1);
+
+      if (mediaRef.current) {
+        mediaRef.current.style.transform = `scale(${1 + progress * 0.04})`;
+      }
+
+      if (contentMotionRef.current) {
+        contentMotionRef.current.style.opacity = String(1 - progress * 0.72);
+        contentMotionRef.current.style.transform = `translate3d(0, ${progress * 28}px, 0)`;
+      }
+    };
+
+    const requestScrollUpdate = () => {
+      if (!animationFrame) animationFrame = window.requestAnimationFrame(updateScrollMotion);
+    };
+
+    updateScrollMotion();
+    window.addEventListener("scroll", requestScrollUpdate, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", requestScrollUpdate);
+      if (animationFrame) window.cancelAnimationFrame(animationFrame);
+    };
+  }, [prefersReducedMotion]);
 
   return (
-    <div className="relative h-screen w-full overflow-hidden">
-      {/* Full-screen Carousel Background */}
-      <div className="relative h-full w-full">
-        {carouselImages.map((image, index) => {
-          const shouldRender = index === currentSlide || index === previousSlide || index === nextSlide;
-
-          if (!shouldRender) return null;
-
-          return (
-            <div
-              key={index}
-              className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
-                index === currentSlide
-                  ? "opacity-100 scale-100 z-0"
-                  : "pointer-events-none z-0 scale-105 opacity-0"
-              }`}
-            >
-              <Image
-                src={image}
-                alt={`Mivan shuttering and aluminium formwork construction in Hyderabad, Telangana - Hero slide ${index + 1}`}
-                fill
-                className="object-cover"
-                sizes="100vw"
-                priority={index === 0}
-                loading={index === 0 ? "eager" : "lazy"}
-              />
-              {/* Dark overlay for better text readability */}
-              <div className="absolute inset-0 bg-black/60"></div>
-            </div>
-          );
-        })}
+    <section
+      ref={heroRef}
+      aria-labelledby="hero-heading"
+      className="relative h-[88svh] min-h-[640px] max-h-[840px] w-full overflow-hidden bg-[#11110D] text-white"
+    >
+      <div ref={mediaRef} className="absolute inset-0 will-change-transform">
+        {slides.map((slide, index) => (
+          <div
+            key={slide.src}
+            aria-hidden={index !== currentSlide}
+            className={`absolute inset-0 transition-opacity duration-[1600ms] ease-in-out motion-reduce:transition-none ${
+              index === currentSlide ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <Image
+              src={slide.src}
+              alt={index === currentSlide ? slide.alt : ""}
+              fill
+              sizes="100vw"
+              priority={index === 0}
+              loading={index === 0 ? "eager" : "lazy"}
+              className={`object-cover ${slide.position} ${index === currentSlide ? "hero-image-active" : ""}`}
+            />
+          </div>
+        ))}
       </div>
 
-      {/* Hero Content Overlay */}
-      <div className="absolute inset-0 flex flex-col justify-end">
-        <div className="text-white px-4 sm:px-6 md:px-8 pb-8 sm:pb-12 md:pb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-          {/* Left side content */}
-          <div className="flex-1 text-center md:text-left">
-            {/* Main Hero Text with Animation */}
-            <div className="h-20 md:h-24 relative overflow-visible">
-              <h1
-                key={currentHeading}
-                className="absolute text-2xl md:text-3xl lg:text-5xl font-bold leading-tight heading-anim flip-in opacity-100 z-10"
-              >
-                <span className="block font-semibold">
-                  {headings[currentHeading]}
-                </span>
-              </h1>
-            </div>
-            
-            {/* Subtitle */}
-            <p className="text-lg md:text-xl lg:text-2xl md:mt-6 mt-2 mb-4 sm:mb-0 text-gray-200 max-w-2xl leading-relaxed">
-              Professional aluminium formwork shuttering, design, installation and supervision services
-            </p>
+      <div className="absolute inset-0 bg-black/48 md:bg-transparent md:bg-linear-to-r md:from-black/92 md:via-black/58 md:to-black/8" />
+      <div className="absolute inset-0 bg-linear-to-t from-black/36 via-transparent to-black/5" />
 
-            {/* Button for mobile/tablet - only show on small screens */}
-            <div className="flex justify-center md:hidden">
-              <button
-                className="group relative backdrop-blur-xl cursor-pointer bg-white/10 hover:bg-white/20 border border-white/30 hover:border-white/50 transition-all duration-300 px-8 py-3 rounded-full shadow-lg hover:shadow-xl hover:scale-105 overflow-hidden"
-                onClick={() => window.location.href = '/contact'}
-              >
-                {/* Shine effect on hover */}
-                <span className="absolute inset-0 bg-linear-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
-                
-                <span className="relative font-light text-sm uppercase tracking-wide sm:text-md flex items-center gap-2">
-                  Contact Us
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                </span>
-              </button>
-            </div>
-          </div>
+      <div
+        ref={contentMotionRef}
+        className="relative z-10 mx-auto flex h-full max-w-7xl items-end px-6 pb-20 pt-28 will-change-[opacity,transform] sm:px-10 md:items-center md:pb-12 md:pt-24 lg:px-12"
+      >
+        <div className="w-full max-w-2xl">
+          <p className="hero-reveal hidden text-xs font-semibold uppercase text-[#F2B441] md:block sm:text-sm">
+            Designed and manufactured in Hyderabad
+          </p>
 
-          {/* Button for desktop - only show on md screens or larger */}
-          <div className="hidden md:flex">
-            <button
-              className="group relative backdrop-blur-xl cursor-pointer bg-white/10 hover:bg-white/20 border border-white/30 hover:border-white/50 transition-all duration-300 px-8 py-3 rounded-full shadow-lg hover:shadow-xl hover:scale-105 overflow-hidden whitespace-nowrap"
-              onClick={() => window.location.href = '/contact'}
+          <h1
+            id="hero-heading"
+            className="hero-reveal max-w-[16ch] text-4xl font-semibold leading-[1.08] sm:text-5xl md:mt-4 lg:text-[3.5rem]"
+            style={{ animationDelay: "100ms" }}
+          >
+            Aluminium Formwork Manufacturer in India
+          </h1>
+
+          <p
+            className="hero-reveal mt-4 max-w-xl text-base leading-relaxed text-white/82 sm:mt-5 sm:text-lg lg:text-xl"
+            style={{ animationDelay: "200ms" }}
+          >
+            Premium Mivan shuttering and aluminium formwork systems, designed and manufactured in
+            Hyderabad for projects across India.
+          </p>
+
+          <div
+            className="hero-reveal mt-7 flex flex-wrap items-center gap-3 sm:gap-4"
+            style={{ animationDelay: "300ms" }}
+          >
+            <Link
+              href="/contact"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-[#ECA72C] px-6 py-3 text-sm font-semibold text-[#131200] transition-colors hover:bg-[#F4BC53] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
-              {/* Shine effect on hover */}
-              <span className="absolute inset-0 bg-linear-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
-              
-              <span className="relative font-light text-sm uppercase tracking-wide sm:text-md flex items-center gap-2">
-                Contact Us
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-              </span>
-            </button>
+              Discuss your project
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+            <Link
+              href="/projects"
+              className="hidden min-h-12 items-center justify-center gap-2 rounded-md border border-white/45 bg-black/15 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:border-white/75 hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:inline-flex"
+            >
+              View projects
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
           </div>
+
         </div>
       </div>
+
       <style jsx>{`
-        .heading-anim {
-          backface-visibility: hidden;
-          transform-style: preserve-3d;
-          will-change: transform, opacity, filter;
-        }
-        @keyframes flipIn {
-          0% {
+        @keyframes heroReveal {
+          from {
             opacity: 0;
-            transform: perspective(1000px) rotateX(-90deg) translateY(20px) scale(0.98);
-            filter: blur(4px);
+            transform: translateY(18px);
           }
-          100% {
+          to {
             opacity: 1;
-            transform: perspective(1000px) rotateX(0deg) translateY(0) scale(1);
-            filter: blur(0);
+            transform: translateY(0);
           }
         }
-        @keyframes flipOut {
-          0% {
+
+        @keyframes heroImageDrift {
+          from {
+            transform: scale(1.035);
+          }
+          to {
+            transform: scale(1);
+          }
+        }
+
+        .hero-reveal {
+          opacity: 0;
+          animation: heroReveal 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        .hero-image-active {
+          animation: heroImageDrift 8s linear both;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .hero-reveal {
             opacity: 1;
-            transform: perspective(1000px) rotateX(0deg) translateY(0) scale(1);
-            filter: blur(0);
+            animation: none;
           }
-          100% {
-            opacity: 0;
-            transform: perspective(1000px) rotateX(90deg) translateY(-20px) scale(0.98);
-            filter: blur(4px);
+
+          .hero-image-active {
+            animation: none;
           }
-        }
-        .flip-in {
-          animation: flipIn 900ms cubic-bezier(0.22, 1, 0.36, 1);
-        }
-        .flip-out {
-          animation: flipOut 900ms cubic-bezier(0.22, 1, 0.36, 1);
         }
       `}</style>
-    </div>
+    </section>
   );
 }
